@@ -1,0 +1,19 @@
+{
+  "name": "GeneBencher",
+  "benchmark_name": "GeneBencher",
+  "version": "0.1.0",
+  "description": "GeneBencher measures how well AI agents perform real bioinformatics, omics and statistical-genetics analyses on a synthetic but biologically structured cohort. Every score is reproducible from a published edition, dataset checksum and scoring rubric.",
+  "section_order": [
+    "genotype_qc",
+    "bulk_rna",
+    "single_cell",
+    "qtl",
+    "networks",
+    "fine_mapping",
+    "annotation",
+    "integrative"
+  ],
+  "editions": [
+    "pilot-2026-11-07"
+  ]
+}

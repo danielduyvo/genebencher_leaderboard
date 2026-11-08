@@ -1,0 +1,399 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Tasks · GeneBencher</title>
+<meta name="description" content="The public task catalogue with scoring weights and calibration context.">
+<link rel="canonical" href="https://danielduyvo.github.io/genebencher_leaderboard/tasks/">
+<meta property="og:url" content="https://danielduyvo.github.io/genebencher_leaderboard/tasks/">
+<meta property="og:title" content="Tasks · GeneBencher">
+<meta property="og:description" content="The public task catalogue with scoring weights and calibration context.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeneBencher">
+<meta name="theme-color" content="#161616">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="icon" href="../static/logo.svg" type="image/svg+xml">
+<link rel="icon" href="../static/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../static/logo.png">
+<link rel="stylesheet" href="../static/style.css?v=5f438ee1d2">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="../">
+      <img class="wordmark-mark" src="../static/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+      <span class="wordmark-text">GeneBencher</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../leaderboard/">Leaderboard</a></li><li><a href="../models/">Models</a></li><li><a href="../tasks/" aria-current="page">Tasks</a></li><li><a href="../sections/">Sections</a></li><li><a href="../compare/">Compare</a></li><li><a href="../methodology/">Methodology</a></li><li><a href="../data/">Data</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="edition-bar">
+    <div class="shell edition-bar-inner">
+      <span class="tag tag-exploratory">Exploratory</span>
+      <a href="../editions/pilot-2026-11-07/">First pilot</a>
+      <span class="edition-meta">2026-11-07 · 20 min per task · 1 seed</span>
+    </div>
+  </div>
+  
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="shell">
+  
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    
+    <li>Home</li>
+    
+    <li>Tasks</li>
+    
+  </ol>
+</nav>
+
+
+  <header class="page-head">
+    <p class="eyebrow">Catalogue</p>
+    <h1>Tasks</h1>
+    <p class="lead">11 of 26 planned tasks are implemented and graded. Each task is shown with its public rubric and calibration baselines; prompts, inputs and truth data stay private.</p>
+    <div class="progress-line">
+      <span class="progress-label">11 / 26 implemented</span>
+      <meter class="meter wide" min="0" max="26" value="11" aria-hidden="true"></meter>
+    </div>
+  </header>
+
+  
+  <section class="section-block" aria-labelledby="section-genotype_qc">
+    <div class="section-head">
+      <div>
+        <h2 id="section-genotype_qc">Genotype QC</h2>
+        <p class="section-sub">Detect sample-level genotype defects such as low call rate, contamination, sample swaps and unexpected relatedness, then return a clean sample set.</p>
+      </div>
+      <a class="btn btn-small" href="../sections/genotype_qc/">Section detail</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Genotype QC task catalogue.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Type</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col" class="col-score">Mean</th>
+            <th scope="col" class="col-score">Best</th>
+            <th scope="col" class="col-pass">Passed</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/GQC-01/">GQC-01</a><span class="model-meta">Sample-level genotype QC</span></th>
+            <td>Pipeline</td>
+            <td>Medium</td>
+            <td class="col-score">0.480</td>
+            <td class="col-score">0.750</td>
+            <td class="col-pass">1 / 4</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <section class="section-block" aria-labelledby="section-bulk_rna">
+    <div class="section-head">
+      <div>
+        <h2 id="section-bulk_rna">Bulk RNA</h2>
+        <p class="section-sub">Normalise and model bulk expression, including latent structure that makes a naive differential-expression analysis confidently wrong.</p>
+      </div>
+      <a class="btn btn-small" href="../sections/bulk_rna/">Section detail</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Bulk RNA task catalogue.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Type</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col" class="col-score">Mean</th>
+            <th scope="col" class="col-score">Best</th>
+            <th scope="col" class="col-pass">Passed</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/BULK-03/">BULK-03</a><span class="model-meta">Latent-factor-adjusted differential expression</span></th>
+            <td>Analysis</td>
+            <td>Medium</td>
+            <td class="col-score">0.341</td>
+            <td class="col-score">0.614</td>
+            <td class="col-pass">1 / 4</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <section class="section-block" aria-labelledby="section-single_cell">
+    <div class="section-head">
+      <div>
+        <h2 id="section-single_cell">Single cell</h2>
+        <p class="section-sub">Work with 10x-style single-cell matrices: cell-type annotation and pseudobulk aggregation under realistic sparsity.</p>
+      </div>
+      <a class="btn btn-small" href="../sections/single_cell/">Section detail</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Single cell task catalogue.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Type</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col" class="col-score">Mean</th>
+            <th scope="col" class="col-score">Best</th>
+            <th scope="col" class="col-pass">Passed</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/SC-02/">SC-02</a><span class="model-meta">Cell-type annotation</span></th>
+            <td>Analysis</td>
+            <td>Medium</td>
+            <td class="col-score">0.667</td>
+            <td class="col-score">0.679</td>
+            <td class="col-pass">4 / 4</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/SC-03/">SC-03</a><span class="model-meta">Pseudobulk and cell-type composition</span></th>
+            <td>Analysis</td>
+            <td>Medium</td>
+            <td class="col-score">0.629</td>
+            <td class="col-score">0.780</td>
+            <td class="col-pass">3 / 4</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <section class="section-block" aria-labelledby="section-qtl">
+    <div class="section-head">
+      <div>
+        <h2 id="section-qtl">QTL</h2>
+        <p class="section-sub">Map genetic effects on expression while controlling population structure and calibrating false discovery.</p>
+      </div>
+      <a class="btn btn-small" href="../sections/qtl/">Section detail</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>QTL task catalogue.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Type</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col" class="col-score">Mean</th>
+            <th scope="col" class="col-score">Best</th>
+            <th scope="col" class="col-pass">Passed</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/QTL-01/">QTL-01</a><span class="model-meta">Cis-eQTL mapping with population structure</span></th>
+            <td>Analysis</td>
+            <td>Medium</td>
+            <td class="col-score">0.576</td>
+            <td class="col-score">0.717</td>
+            <td class="col-pass">2 / 4</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <section class="section-block" aria-labelledby="section-networks">
+    <div class="section-head">
+      <div>
+        <h2 id="section-networks">Gene networks</h2>
+        <p class="section-sub">Infer gene regulatory networks from expression and genotype data, separating direct regulation from latent-confounded correlation.</p>
+      </div>
+      <a class="btn btn-small" href="../sections/networks/">Section detail</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Gene networks task catalogue.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Type</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col" class="col-score">Mean</th>
+            <th scope="col" class="col-score">Best</th>
+            <th scope="col" class="col-pass">Passed</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/NET-01/">NET-01</a><span class="model-meta">Co-expression network with latent confounders</span></th>
+            <td>Analysis</td>
+            <td>Hard</td>
+            <td class="col-score">0.184</td>
+            <td class="col-score">0.432</td>
+            <td class="col-pass">1 / 4</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/NET-02/">NET-02</a><span class="model-meta">Confounder-adjusted GRN inference across replicates</span></th>
+            <td>Method</td>
+            <td>Hard</td>
+            <td class="col-score">0.313</td>
+            <td class="col-score">0.572</td>
+            <td class="col-pass">2 / 4</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <section class="section-block" aria-labelledby="section-fine_mapping">
+    <div class="section-head">
+      <div>
+        <h2 id="section-fine_mapping">Fine mapping</h2>
+        <p class="section-sub">Resolve causal variants from summary statistics and distinguish shared causal signal from coincidental colocalization.</p>
+      </div>
+      <a class="btn btn-small" href="../sections/fine_mapping/">Section detail</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Fine mapping task catalogue.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Type</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col" class="col-score">Mean</th>
+            <th scope="col" class="col-score">Best</th>
+            <th scope="col" class="col-pass">Passed</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/FM-01/">FM-01</a><span class="model-meta">Cis-eQTL fine mapping</span></th>
+            <td>Analysis</td>
+            <td>Hard</td>
+            <td class="col-score">0.892</td>
+            <td class="col-score">0.898</td>
+            <td class="col-pass">4 / 4</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/FM-02/">FM-02</a><span class="model-meta">eQTL-GWAS colocalization</span></th>
+            <td>Analysis</td>
+            <td>Hard</td>
+            <td class="col-score">0.220</td>
+            <td class="col-score">0.426</td>
+            <td class="col-pass">0 / 4</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+  <section class="section-block" aria-labelledby="section-annotation">
+    <div class="section-head">
+      <div>
+        <h2 id="section-annotation">Functional annotation</h2>
+        <p class="section-sub">Classify variants by regulatory function and estimate stratified heritability enrichment from incomplete public tracks.</p>
+      </div>
+      <a class="btn btn-small" href="../sections/annotation/">Section detail</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Functional annotation task catalogue.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Type</th>
+            <th scope="col">Difficulty</th>
+            <th scope="col" class="col-score">Mean</th>
+            <th scope="col" class="col-score">Best</th>
+            <th scope="col" class="col-pass">Passed</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/ANN-01/">ANN-01</a><span class="model-meta">Functional annotation of variants</span></th>
+            <td>Analysis</td>
+            <td>Medium</td>
+            <td class="col-score">0.536</td>
+            <td class="col-score">0.781</td>
+            <td class="col-pass">3 / 4</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../tasks/ANN-02/">ANN-02</a><span class="model-meta">Stratified heritability enrichment</span></th>
+            <td>Analysis</td>
+            <td>Hard</td>
+            <td class="col-score">0.529</td>
+            <td class="col-score">0.942</td>
+            <td class="col-pass">2 / 4</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+
+  <section class="section-block">
+    <h2>What is not public</h2>
+    <p class="section-sub">To keep the benchmark reusable, the site publishes task summaries, scoring weights, pass thresholds, calibration baselines and per-task sub-scores. It does not publish prompts, task inputs, grader code or truth tables. Task pages describe the rubric, not the answer.</p>
+  </section>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div>
+      <p class="footer-name">GeneBencher</p>
+      <p class="footer-note">A public leaderboard for AI agents on bioinformatics, omics and statistical genetics.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../methodology/">Methodology</a>
+      <a href="../data/">Data</a>
+      <a href="../editions/">Editions</a>
+      <a href="https://github.com/danielduyvo/genebencher_leaderboard" rel="noopener">Site repository</a>
+    </div>
+  </div>
+  <div class="shell footer-legal">
+    <p>GeneBencher benchmark. Scores are edition-specific and are not comparable across editions. Content licensed MIT.</p>
+  </div>
+</footer>
+
+<script src="../static/app.js?v=b8e5dd60d9" defer></script>
+</body>
+</html>

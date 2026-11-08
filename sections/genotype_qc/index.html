@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Genotype QC · GeneBencher</title>
+<meta name="description" content="Detect sample-level genotype defects such as low call rate, contamination, sample swaps and unexpected relatedness, then return a clean sample set.">
+<link rel="canonical" href="https://danielduyvo.github.io/genebencher_leaderboard/sections/genotype_qc/">
+<meta property="og:url" content="https://danielduyvo.github.io/genebencher_leaderboard/sections/genotype_qc/">
+<meta property="og:title" content="Genotype QC · GeneBencher">
+<meta property="og:description" content="Detect sample-level genotype defects such as low call rate, contamination, sample swaps and unexpected relatedness, then return a clean sample set.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeneBencher">
+<meta name="theme-color" content="#161616">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="icon" href="../../static/logo.svg" type="image/svg+xml">
+<link rel="icon" href="../../static/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../static/logo.png">
+<link rel="stylesheet" href="../../static/style.css?v=5f438ee1d2">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="../../">
+      <img class="wordmark-mark" src="../../static/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+      <span class="wordmark-text">GeneBencher</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../../leaderboard/">Leaderboard</a></li><li><a href="../../models/">Models</a></li><li><a href="../../tasks/">Tasks</a></li><li><a href="../../sections/" aria-current="page">Sections</a></li><li><a href="../../compare/">Compare</a></li><li><a href="../../methodology/">Methodology</a></li><li><a href="../../data/">Data</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="edition-bar">
+    <div class="shell edition-bar-inner">
+      <span class="tag tag-exploratory">Exploratory</span>
+      <a href="../../editions/pilot-2026-11-07/">First pilot</a>
+      <span class="edition-meta">2026-11-07 · 20 min per task · 1 seed</span>
+    </div>
+  </div>
+  
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="shell">
+  
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    
+    <li>Home</li>
+    
+    <li><a href="../../sections/">Sections</a></li>
+    
+    <li>Genotype QC</li>
+    
+  </ol>
+</nav>
+
+
+  <header class="page-head">
+    <div>
+      <p class="eyebrow">Section</p>
+      <h1>Genotype QC</h1>
+      <p class="lead">Detect sample-level genotype defects such as low call rate, contamination, sample swaps and unexpected relatedness, then return a clean sample set.</p>
+      <div class="tag-row">
+        <span class="tag tag-neutral">1 tasks</span>
+        
+        <span class="tag tag-neutral">First pilot</span>
+      </div>
+    </div>
+    
+    <div class="headline-score">
+      <p class="headline-rank">Section mean</p>
+      <p class="headline-number">0.480</p>
+      <p class="headline-label">Best: Gemini 3.8 Flash at 0.750</p>
+      <meter class="meter" min="0" max="1" value="0.4801395865892738" aria-hidden="true"></meter>
+    </div>
+    
+  </header>
+
+  
+  <section class="section-block" aria-labelledby="matrix-heading">
+    <div class="section-head">
+      <div>
+        <h2 id="matrix-heading">Models × tasks</h2>
+        <p class="section-sub">Every cell is a task score. A cross indicates the model did not meet the task's pass threshold; timeout and error are labelled explicitly.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table matrix">
+        <caption>Genotype QC task matrix for First pilot.</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="col-rank">Rank</th>
+            <th scope="col">Model</th>
+            <th scope="col" class="col-task"><a href="../../tasks/GQC-01/">GQC-01</a><span class="model-meta">mean 0.480</span></th>
+            <th scope="col" class="col-score">Section</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          
+          <tr>
+            <td class="col-rank rank">1</td>
+            <th scope="row" class="model-cell"><a href="../../models/gemini-3.8-flash/">Gemini 3.8 Flash</a></th>
+            
+            
+            <td class="cell heat heat-3">
+              
+              <span class="num">0.750</span>
+              <span class="cell-status">✓</span>
+              
+            </td>
+            
+            <td class="col-score"><span class="score-strong">0.750</span><meter class="meter" min="0" max="1" value="0.7496425951027581" aria-hidden="true"></meter></td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">2</td>
+            <th scope="row" class="model-cell"><a href="../../models/deepseek-v4.1-flash/">DeepSeek V4.1 Flash</a></th>
+            
+            
+            <td class="cell heat heat-2">
+              
+              <span class="num">0.594</span>
+              <span class="cell-status">✗</span>
+              
+            </td>
+            
+            <td class="col-score"><span class="score-strong">0.594</span><meter class="meter" min="0" max="1" value="0.5942911434809763" aria-hidden="true"></meter></td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">3</td>
+            <th scope="row" class="model-cell"><a href="../../models/glm-5.3-flash/">GLM-5.3-Flash</a></th>
+            
+            
+            <td class="cell heat heat-2">
+              
+              <span class="num">0.577</span>
+              <span class="cell-status">✗</span>
+              
+            </td>
+            
+            <td class="col-score"><span class="score-strong">0.577</span><meter class="meter" min="0" max="1" value="0.5766246077733608" aria-hidden="true"></meter></td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">4</td>
+            <th scope="row" class="model-cell"><a href="../../models/mimo-v2.6-flash/">MiMo-V2.6-Flash</a></th>
+            
+            
+            <td class="cell heat heat-0">
+              
+              <span class="num">0.000</span>
+              <span class="cell-status">timeout</span>
+              
+            </td>
+            
+            <td class="col-score"><span class="score-strong">0.000</span><meter class="meter" min="0" max="1" value="0" aria-hidden="true"></meter></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">Pass thresholds vary by task. The task page shows each threshold and the calibration ladder.</p>
+  </section>
+
+  <section class="section-block">
+    <h2>Tasks in this section</h2>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Genotype QC tasks.</caption>
+        <thead><tr><th scope="col">Task</th><th scope="col">Type</th><th scope="col" class="col-score">Mean</th></tr></thead>
+        <tbody>
+          <tr><th scope="row"><a href="../../tasks/GQC-01/">GQC-01</a><span class="model-meta">Sample-level genotype QC</span></th><td>Pipeline</td><td class="col-score">0.480</td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+  
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div>
+      <p class="footer-name">GeneBencher</p>
+      <p class="footer-note">A public leaderboard for AI agents on bioinformatics, omics and statistical genetics.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../methodology/">Methodology</a>
+      <a href="../../data/">Data</a>
+      <a href="../../editions/">Editions</a>
+      <a href="https://github.com/danielduyvo/genebencher_leaderboard" rel="noopener">Site repository</a>
+    </div>
+  </div>
+  <div class="shell footer-legal">
+    <p>GeneBencher benchmark. Scores are edition-specific and are not comparable across editions. Content licensed MIT.</p>
+  </div>
+</footer>
+
+<script src="../../static/app.js?v=b8e5dd60d9" defer></script>
+</body>
+</html>

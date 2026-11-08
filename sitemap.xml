@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/leaderboard/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/models/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/sections/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/editions/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/compare/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/methodology/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/data/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/models/gemini-3.8-flash/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/models/deepseek-v4.1-flash/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/models/glm-5.3-flash/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/models/mimo-v2.6-flash/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/GQC-01/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/BULK-03/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/SC-02/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/SC-03/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/QTL-01/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/NET-01/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/NET-02/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/FM-01/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/FM-02/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/ANN-01/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/tasks/ANN-02/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/sections/genotype_qc/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/sections/bulk_rna/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/sections/single_cell/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/sections/qtl/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/sections/networks/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/sections/fine_mapping/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/sections/annotation/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/sections/integrative/</loc><lastmod>2026-11-07</lastmod></url>
+  <url><loc>https://danielduyvo.github.io/genebencher_leaderboard/editions/pilot-2026-11-07/</loc><lastmod>2026-11-07</lastmod></url>
+</urlset>

@@ -1,0 +1,298 @@
+[
+  {
+    "id": "GQC-01",
+    "title": "Sample-level genotype QC",
+    "section": "genotype_qc",
+    "type": "pipeline",
+    "difficulty": "medium",
+    "description": "Flag sample-level genotype defects and return a clean sample set. Scored on per-class F1, false removals, defect-severity ranking and runtime, so flagging everything is not a winning strategy.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "per_class_f1",
+        "value": 0.55
+      },
+      {
+        "name": "false_removal_rate",
+        "value": 0.25
+      },
+      {
+        "name": "severity_auprc",
+        "value": 0.1
+      },
+      {
+        "name": "runtime",
+        "value": 0.1
+      }
+    ]
+  },
+  {
+    "id": "BULK-03",
+    "title": "Latent-factor-adjusted differential expression",
+    "section": "bulk_rna",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Differential expression adjusted for latent structure. The naive analysis finds many latent-driven genes; the task rewards recovering the real contrast without removing true effects.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "de_auprc",
+        "value": 0.5
+      },
+      {
+        "name": "false_removal",
+        "value": 0.2
+      },
+      {
+        "name": "effect_accuracy",
+        "value": 0.15
+      },
+      {
+        "name": "latent_recovery",
+        "value": 0.15
+      }
+    ]
+  },
+  {
+    "id": "SC-02",
+    "title": "Cell-type annotation",
+    "section": "single_cell",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Annotate cells against a labelled reference atlas at granular and major resolution. Scored on accuracy, macro-F1, adjusted Rand index and major-class accuracy.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "accuracy",
+        "value": 0.4
+      },
+      {
+        "name": "major_accuracy",
+        "value": 0.2
+      },
+      {
+        "name": "macro_f1",
+        "value": 0.25
+      },
+      {
+        "name": "ari",
+        "value": 0.15
+      }
+    ]
+  },
+  {
+    "id": "SC-03",
+    "title": "Pseudobulk and cell-type composition",
+    "section": "single_cell",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Aggregate sparse single-cell libraries into pseudobulk profiles and recover cell-type composition. Scored on composition distance, composition r-squared and pseudobulk correlation.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "composition_l1",
+        "value": 0.45
+      },
+      {
+        "name": "composition_r2",
+        "value": 0.25
+      },
+      {
+        "name": "pseudobulk_correlation",
+        "value": 0.3
+      }
+    ]
+  },
+  {
+    "id": "QTL-01",
+    "title": "Cis-eQTL mapping with population structure",
+    "section": "qtl",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Map cis-eQTLs while controlling population structure and calibrating false discovery. Scored on power at a fixed FDR, calibration, effect accuracy and sign accuracy.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "power_at_fdr",
+        "value": 0.45
+      },
+      {
+        "name": "fdr_calibration",
+        "value": 0.25
+      },
+      {
+        "name": "effect_accuracy",
+        "value": 0.2
+      },
+      {
+        "name": "sign_accuracy",
+        "value": 0.1
+      }
+    ]
+  },
+  {
+    "id": "NET-01",
+    "title": "Co-expression network with latent confounders",
+    "section": "networks",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Infer a co-expression network in the presence of latent confounders. Scored on direct-edge recovery, path recovery, sign accuracy and control of latent-driven false positives.",
+    "pass_threshold": 0.35,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "direct_auprc",
+        "value": 0.55
+      },
+      {
+        "name": "path_auprc",
+        "value": 0.1
+      },
+      {
+        "name": "sign_accuracy",
+        "value": 0.2
+      },
+      {
+        "name": "latent_fpr_control",
+        "value": 0.15
+      }
+    ]
+  },
+  {
+    "id": "NET-02",
+    "title": "Confounder-adjusted GRN inference across replicates",
+    "section": "networks",
+    "type": "method",
+    "difficulty": "hard",
+    "description": "A method task evaluated on five held-out replicates with different graph topologies, confounder strengths and latent density. Scored on the mean, with a variance penalty for unstable methods.",
+    "pass_threshold": 0.38,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "direct_auprc",
+        "value": 0.55
+      },
+      {
+        "name": "celltype_auprc",
+        "value": 0.2
+      },
+      {
+        "name": "sign_accuracy",
+        "value": 0.2
+      },
+      {
+        "name": "path_auprc",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "id": "FM-01",
+    "title": "Cis-eQTL fine mapping",
+    "section": "fine_mapping",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Build 95% credible sets and posterior inclusion probabilities from eQTL summary statistics and an LD panel. Scored on coverage, set size, PIP ranking and calibration.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "credible_set_coverage",
+        "value": 0.4
+      },
+      {
+        "name": "set_size",
+        "value": 0.2
+      },
+      {
+        "name": "pip_auprc",
+        "value": 0.3
+      },
+      {
+        "name": "pip_calibration",
+        "value": 0.1
+      }
+    ]
+  },
+  {
+    "id": "FM-02",
+    "title": "eQTL-GWAS colocalization",
+    "section": "fine_mapping",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Distinguish shared causal signal from coincidental overlap using eQTL and GWAS summary statistics. Scored on H0-H4 hypothesis accuracy, H4 F1 and posterior quality.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "hypothesis_accuracy",
+        "value": 0.45
+      },
+      {
+        "name": "h4_f1",
+        "value": 0.3
+      },
+      {
+        "name": "true_posterior",
+        "value": 0.25
+      }
+    ]
+  },
+  {
+    "id": "ANN-01",
+    "title": "Functional annotation of variants",
+    "section": "annotation",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Classify variants by regulatory function from incomplete chromatin, conservation and motif tracks. Scored on macro-F1 and motif-disruption ranking, so a model must separate real signal from missing annotation.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "macro_f1",
+        "value": 0.5
+      },
+      {
+        "name": "motif_auprc",
+        "value": 0.3
+      },
+      {
+        "name": "disruption_accuracy",
+        "value": 0.1
+      },
+      {
+        "name": "coverage",
+        "value": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ANN-02",
+    "title": "Stratified heritability enrichment",
+    "section": "annotation",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Estimate stratified heritability enrichment across annotation categories and report calibrated uncertainty. Scored on enrichment error, share error and confidence-interval coverage.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "enrichment_error",
+        "value": 0.5
+      },
+      {
+        "name": "share_error",
+        "value": 0.3
+      },
+      {
+        "name": "ci_coverage",
+        "value": 0.2
+      }
+    ]
+  }
+]

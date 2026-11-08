@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Sections · GeneBencher</title>
+<meta name="description" content="Benchmark sections, task counts and edition scores.">
+<link rel="canonical" href="https://danielduyvo.github.io/genebencher_leaderboard/sections/">
+<meta property="og:url" content="https://danielduyvo.github.io/genebencher_leaderboard/sections/">
+<meta property="og:title" content="Sections · GeneBencher">
+<meta property="og:description" content="Benchmark sections, task counts and edition scores.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeneBencher">
+<meta name="theme-color" content="#161616">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="icon" href="../static/logo.svg" type="image/svg+xml">
+<link rel="icon" href="../static/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../static/logo.png">
+<link rel="stylesheet" href="../static/style.css?v=5f438ee1d2">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="../">
+      <img class="wordmark-mark" src="../static/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+      <span class="wordmark-text">GeneBencher</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../leaderboard/">Leaderboard</a></li><li><a href="../models/">Models</a></li><li><a href="../tasks/">Tasks</a></li><li><a href="../sections/" aria-current="page">Sections</a></li><li><a href="../compare/">Compare</a></li><li><a href="../methodology/">Methodology</a></li><li><a href="../data/">Data</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="edition-bar">
+    <div class="shell edition-bar-inner">
+      <span class="tag tag-exploratory">Exploratory</span>
+      <a href="../editions/pilot-2026-11-07/">First pilot</a>
+      <span class="edition-meta">2026-11-07 · 20 min per task · 1 seed</span>
+    </div>
+  </div>
+  
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="shell">
+  
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    
+    <li>Home</li>
+    
+    <li>Sections</li>
+    
+  </ol>
+</nav>
+
+
+  <header class="page-head">
+    <p class="eyebrow">Sections</p>
+    <h1>Benchmark sections</h1>
+    <p class="lead">The benchmark is organised into sections. Section scores are the mean of their tasks; the overall score is the macro-average across scored sections.</p>
+  </header>
+
+  <div class="table-wrap">
+    <table class="data-table">
+      <caption>Section catalogue and First pilot scores.</caption>
+      <thead>
+        <tr>
+          <th scope="col">Section</th>
+          <th scope="col" class="col-pass">Tasks</th>
+          <th scope="col" class="col-score">Edition mean</th>
+          <th scope="col">Best model</th>
+          <th scope="col">Status</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        <tr>
+          <th scope="row"><a href="../sections/genotype_qc/">Genotype QC</a><span class="model-meta">Detect sample-level genotype defects such as low call rate, contamination, sample swaps and unexpected relatedness, then return a clean sample set.</span></th>
+          <td class="col-pass">1</td>
+          <td class="col-score">0.480<meter class="meter" min="0" max="1" value="0.4801395865892738" aria-hidden="true"></meter></td>
+          <td>Gemini 3.8 Flash</td>
+          <td><span class="tag status-ok">Implemented</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row"><a href="../sections/bulk_rna/">Bulk RNA</a><span class="model-meta">Normalise and model bulk expression, including latent structure that makes a naive differential-expression analysis confidently wrong.</span></th>
+          <td class="col-pass">1</td>
+          <td class="col-score">0.341<meter class="meter" min="0" max="1" value="0.34135683846609416" aria-hidden="true"></meter></td>
+          <td>Gemini 3.8 Flash</td>
+          <td><span class="tag status-ok">Implemented</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row"><a href="../sections/single_cell/">Single cell</a><span class="model-meta">Work with 10x-style single-cell matrices: cell-type annotation and pseudobulk aggregation under realistic sparsity.</span></th>
+          <td class="col-pass">2</td>
+          <td class="col-score">0.648<meter class="meter" min="0" max="1" value="0.6478199542821033" aria-hidden="true"></meter></td>
+          <td>Gemini 3.8 Flash</td>
+          <td><span class="tag status-ok">Implemented</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row"><a href="../sections/qtl/">QTL</a><span class="model-meta">Map genetic effects on expression while controlling population structure and calibrating false discovery.</span></th>
+          <td class="col-pass">1</td>
+          <td class="col-score">0.576<meter class="meter" min="0" max="1" value="0.5764446176735916" aria-hidden="true"></meter></td>
+          <td>MiMo-V2.6-Flash</td>
+          <td><span class="tag status-ok">Implemented</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row"><a href="../sections/networks/">Gene networks</a><span class="model-meta">Infer gene regulatory networks from expression and genotype data, separating direct regulation from latent-confounded correlation.</span></th>
+          <td class="col-pass">2</td>
+          <td class="col-score">0.249<meter class="meter" min="0" max="1" value="0.2485026647988154" aria-hidden="true"></meter></td>
+          <td>Gemini 3.8 Flash</td>
+          <td><span class="tag status-ok">Implemented</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row"><a href="../sections/fine_mapping/">Fine mapping</a><span class="model-meta">Resolve causal variants from summary statistics and distinguish shared causal signal from coincidental colocalization.</span></th>
+          <td class="col-pass">2</td>
+          <td class="col-score">0.556<meter class="meter" min="0" max="1" value="0.5562400217621257" aria-hidden="true"></meter></td>
+          <td>Gemini 3.8 Flash</td>
+          <td><span class="tag status-ok">Implemented</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row"><a href="../sections/annotation/">Functional annotation</a><span class="model-meta">Classify variants by regulatory function and estimate stratified heritability enrichment from incomplete public tracks.</span></th>
+          <td class="col-pass">2</td>
+          <td class="col-score">0.532<meter class="meter" min="0" max="1" value="0.5324182463136362" aria-hidden="true"></meter></td>
+          <td>Gemini 3.8 Flash</td>
+          <td><span class="tag status-ok">Implemented</span></td>
+        </tr>
+        
+        <tr>
+          <th scope="row"><a href="../sections/integrative/">Integrative</a><span class="model-meta">Combine bulk, single-cell, genotype and trait data into cell-type-resolved regulatory models and causal estimates.</span></th>
+          <td class="col-pass">0</td>
+          <td class="col-score">—</td>
+          <td>—</td>
+          <td><span class="tag tag-planned">Planned</span></td>
+        </tr>
+        
+      </tbody>
+    </table>
+  </div>
+
+  <section class="section-block">
+    <h2>Reading section scores</h2>
+    <p class="section-sub">A section can contain one task, as several do in this edition. In that case the section score equals the task score, and the macro-average gives each section equal weight regardless of task count. This is deliberate: it stops a section with many tasks from dominating the overall score.</p>
+  </section>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div>
+      <p class="footer-name">GeneBencher</p>
+      <p class="footer-note">A public leaderboard for AI agents on bioinformatics, omics and statistical genetics.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../methodology/">Methodology</a>
+      <a href="../data/">Data</a>
+      <a href="../editions/">Editions</a>
+      <a href="https://github.com/danielduyvo/genebencher_leaderboard" rel="noopener">Site repository</a>
+    </div>
+  </div>
+  <div class="shell footer-legal">
+    <p>GeneBencher benchmark. Scores are edition-specific and are not comparable across editions. Content licensed MIT.</p>
+  </div>
+</footer>
+
+<script src="../static/app.js?v=b8e5dd60d9" defer></script>
+</body>
+</html>

@@ -1,0 +1,233 @@
+{
+  "export_version": 1,
+  "edition_id": "pilot-2026-11-07",
+  "exported_fields": [
+    "edition_id",
+    "model_slug",
+    "task_id",
+    "section",
+    "score",
+    "pass",
+    "schema_valid",
+    "status",
+    "error_code",
+    "runtime_sec",
+    "budget_exhausted",
+    "sub_scores"
+  ],
+  "omitted": [
+    "truth-side metric diagnostics (counts and per-class truth statistics)",
+    "prompt text and prompt files",
+    "task inputs and mounted paths",
+    "grader and baseline code",
+    "truth tables and truth-derived diagnostics",
+    "raw agent transcripts, work directories and logs",
+    "absolute filesystem paths"
+  ],
+  "sources": [
+    {
+      "name": "calibration/ANN-01/naive.json",
+      "sha256": "937d8d5a540441b5c95dd258f9823d42666d4462988acfc3a19fd9432dbd36de"
+    },
+    {
+      "name": "calibration/ANN-01/null.json",
+      "sha256": "c2c0e8d2eaf7d3c0286d786e58d830f9b822d6bb2bc9a08ce57c434136663545"
+    },
+    {
+      "name": "calibration/ANN-01/oracle.json",
+      "sha256": "891214b55b929391d02c236b14e45662692550f10128c8cbacbdd1af06a0f349"
+    },
+    {
+      "name": "calibration/ANN-01/solution.json",
+      "sha256": "de06a46021901581db0306f06b99a53936cc0345399f6e150bddbc520e0aae2d"
+    },
+    {
+      "name": "calibration/ANN-02/naive.json",
+      "sha256": "66c123fb58a29c578fbdbd79c5e8991988808d56095dff379c2b4d8e75e0e575"
+    },
+    {
+      "name": "calibration/ANN-02/null.json",
+      "sha256": "80a6222f5fb08f9eb1cb0411d54c474b07939746263b577d705ccd9afcee6d9c"
+    },
+    {
+      "name": "calibration/ANN-02/oracle.json",
+      "sha256": "7e67ac945dfc4396dce191987e258e1e87357b716f465d3a6d6bb5741aaa190b"
+    },
+    {
+      "name": "calibration/ANN-02/solution.json",
+      "sha256": "c288b82b83b19f42f7c57026cef97a8e398dc0a10de2fd5ee6eee196b9b293fc"
+    },
+    {
+      "name": "calibration/BULK-03/naive.json",
+      "sha256": "9428cf47d549453d8be93460c0aa4b35c1fbb15e688e28e92228c4aee41dad8f"
+    },
+    {
+      "name": "calibration/BULK-03/null.json",
+      "sha256": "a6d72ad1c748693b2351941d063bc29c18af31d29025e4d77472c52147f52e74"
+    },
+    {
+      "name": "calibration/BULK-03/oracle.json",
+      "sha256": "5c6ec65de68c11e2741d041fe96c26dd7ecc92dc3a01a7b5b5427202af70c6be"
+    },
+    {
+      "name": "calibration/BULK-03/solution.json",
+      "sha256": "9f5ac20c8397ed74083176ed8d53a5516dbcb785a44daf581a4c1d71226551ac"
+    },
+    {
+      "name": "calibration/FM-01/naive.json",
+      "sha256": "5cbc100b3159940cb5c46da2e4dddeb3d9fadec5acc1e0c8dead1fe45a97d9d8"
+    },
+    {
+      "name": "calibration/FM-01/null.json",
+      "sha256": "cdf39b640135f40443013f211124f64fe943c61b21a82bdc1e917082ecc0823f"
+    },
+    {
+      "name": "calibration/FM-01/oracle.json",
+      "sha256": "746c1f427a94a324578ce28e2a8ba10003b2de89025354efd8c56f7b0be4a933"
+    },
+    {
+      "name": "calibration/FM-01/solution.json",
+      "sha256": "51829da58d2f35bb51ea96c5e31028f50d8e1d533e9c2a75002046b2706ca93f"
+    },
+    {
+      "name": "calibration/FM-02/naive.json",
+      "sha256": "10b9d3b7555600712e69b106455ff1cb488b0d4c1738a7b7ca2fe38c92933342"
+    },
+    {
+      "name": "calibration/FM-02/null.json",
+      "sha256": "8dbf294b1ae4bec7c0da124a78a4e5ca03a5e2e42d37053de0094918086bcce4"
+    },
+    {
+      "name": "calibration/FM-02/oracle.json",
+      "sha256": "60c10bdcf88479ddf774883a820bb123357612fb3096a84d605c59b4b60c27c4"
+    },
+    {
+      "name": "calibration/FM-02/solution.json",
+      "sha256": "0145814b651998882a37f47d3e270efd53b2ca7e19194d9bde2f3d25c9d9c19c"
+    },
+    {
+      "name": "calibration/GQC-01/naive.json",
+      "sha256": "2f2c8a7c6d2d458359020b442a6b5b07c8af7fb154622c29995be25ef0aee9a1"
+    },
+    {
+      "name": "calibration/GQC-01/null.json",
+      "sha256": "c51053e702a025726c67a1b17d785c01c02fc47fd7bfff04ecf098c6b7e85106"
+    },
+    {
+      "name": "calibration/GQC-01/oracle.json",
+      "sha256": "a89740dc965a6d1642b9b65b4536d76aab0cd87a355ed9af8e6113404bab7cf6"
+    },
+    {
+      "name": "calibration/GQC-01/solution.json",
+      "sha256": "e9ce10974610db3d0cdd45f205873daabbb3eec10c4c14b8c4cd1ed7275e6d89"
+    },
+    {
+      "name": "calibration/NET-01/naive.json",
+      "sha256": "d023493bdaa542316b89ddc324bacc848840e745e5b81e149f3a718ed1ed2667"
+    },
+    {
+      "name": "calibration/NET-01/null.json",
+      "sha256": "b2d662b38ea915f1a579478f0a54e452a35bcb31b648cabea1bd9bb2624d6329"
+    },
+    {
+      "name": "calibration/NET-01/oracle.json",
+      "sha256": "eeadd9c3349ca1a720df99dd3c24c4830a554d358d8a88554c52f7fa1e443d46"
+    },
+    {
+      "name": "calibration/NET-01/solution.json",
+      "sha256": "50c278d75fbe77f8f1c033aa2a1e0cdb2c2d1032e80177ecdf5b088d6e0b0f6c"
+    },
+    {
+      "name": "calibration/NET-02/naive.json",
+      "sha256": "d0a7bb3279923a89a7d41d653fd14572882cbd373538524242d333045b89f978"
+    },
+    {
+      "name": "calibration/NET-02/null.json",
+      "sha256": "9a8a752f38cc237a0424ab5acc7fb30cd7f6d8d7e41558f48594ff477969f9a5"
+    },
+    {
+      "name": "calibration/NET-02/oracle.json",
+      "sha256": "b5b00f84f379404f2a7252468ce3bab856505f8d50693834fc44880451cac40b"
+    },
+    {
+      "name": "calibration/NET-02/solution.json",
+      "sha256": "ca899d23b73f40ac009d82d55c0e2852215318c0073fd1e676da63778b4cb597"
+    },
+    {
+      "name": "calibration/QTL-01/naive.json",
+      "sha256": "3f30fa39739b45c53d8e56b52f85a0c3ec6fd8470c062e1fb7909d8a84ead1aa"
+    },
+    {
+      "name": "calibration/QTL-01/null.json",
+      "sha256": "28c5e5e2259728d6d52325d1c7ac0d33745d1c6b7bde4d2ff8059481e24dbd83"
+    },
+    {
+      "name": "calibration/QTL-01/oracle.json",
+      "sha256": "91201835334c18e7c08cb07a6e732a0f47ab3997d034c6f1433a152d347fb47b"
+    },
+    {
+      "name": "calibration/QTL-01/solution.json",
+      "sha256": "a730c9cc247297b878b9f5d1f54a46b8c4855a0acaca7dc5e995af8c0ebad7b4"
+    },
+    {
+      "name": "calibration/SC-02/naive.json",
+      "sha256": "88e4015ebe352191b48be375afdf941834b6c20faf440f24de2f746140a206fe"
+    },
+    {
+      "name": "calibration/SC-02/null.json",
+      "sha256": "ff4fc847f3321d4250cc494a514cc186bccfacc5c42ba2f255b78fa9daea24ae"
+    },
+    {
+      "name": "calibration/SC-02/oracle.json",
+      "sha256": "20f89c8771ea6db393a1f9a1c5f760735f0ee66765d982dfe1ac79d694b550f6"
+    },
+    {
+      "name": "calibration/SC-02/solution.json",
+      "sha256": "b2d2e3160efa8efc02f092cf8d95b2cfd72add9e01abc60f2b7cce9e46d806c9"
+    },
+    {
+      "name": "calibration/SC-03/naive.json",
+      "sha256": "a60f0b30c24283c9f0c2fef6b040d40ca1fef4767f4ca375b5556e5982c27197"
+    },
+    {
+      "name": "calibration/SC-03/null.json",
+      "sha256": "0fd60a060785968aa443fae7adf44990f5e5fdae9eda191012cd8ae6f392dbb0"
+    },
+    {
+      "name": "calibration/SC-03/oracle.json",
+      "sha256": "55c572f84d9ba2e318aed0ad3f853365325e3ffd572cdb1b345189ebb4a71abd"
+    },
+    {
+      "name": "calibration/SC-03/solution.json",
+      "sha256": "ae58ec41ff86ee55fd0d66f4cb802ec46c630b344547c8cbbfc1c1994e55c851"
+    },
+    {
+      "name": "leaderboard.json",
+      "sha256": "e2713efceb9ffeeed682a971a8f446cda1f73b60745e03b3e3e7ad155ca9dc84"
+    },
+    {
+      "name": "run_config.json",
+      "sha256": "9ca11a16a60a4bbf603d86f109946a8f313f77cdef6d278cd4170a429ffee0fc"
+    },
+    {
+      "name": "suite/deepseek-v4.1-flash.json",
+      "sha256": "3e427ffb6e695a03e01d62fc1fea883cca30d36307cb8aae14fd20dd95840e81"
+    },
+    {
+      "name": "suite/gemini-3.8-flash.json",
+      "sha256": "bf9872c02ecad7405b68e7460717490a08c122e206d0e1c55522a154c41b5e04"
+    },
+    {
+      "name": "suite/glm-5.3-flash.json",
+      "sha256": "34012e881996d00d5d56b28bfa5b2f33991c7aef3a706cdc7924416d104ed4be"
+    },
+    {
+      "name": "suite/mimo-v2.6-flash.json",
+      "sha256": "37d98991a485c5e08e60ff455c9bbbdf6b088cff74d5a0276312e18525dd3b7c"
+    },
+    {
+      "name": "timings.tsv",
+      "sha256": "6fee1cb6eb376d7e2059ce07f25f6568f89e422a44cdc6a8dbf8fdc526d63101"
+    }
+  ]
+}

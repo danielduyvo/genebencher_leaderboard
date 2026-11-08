@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://danielduyvo.github.io/genebencher_leaderboard/sitemap.xml

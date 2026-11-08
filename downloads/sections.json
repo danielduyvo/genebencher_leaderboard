@@ -1,0 +1,66 @@
+[
+  {
+    "id": "genotype_qc",
+    "title": "Genotype QC",
+    "description": "Detect sample-level genotype defects such as low call rate, contamination, sample swaps and unexpected relatedness, then return a clean sample set.",
+    "order": 1,
+    "planned": false,
+    "task_count": 1
+  },
+  {
+    "id": "bulk_rna",
+    "title": "Bulk RNA",
+    "description": "Normalise and model bulk expression, including latent structure that makes a naive differential-expression analysis confidently wrong.",
+    "order": 2,
+    "planned": false,
+    "task_count": 1
+  },
+  {
+    "id": "single_cell",
+    "title": "Single cell",
+    "description": "Work with 10x-style single-cell matrices: cell-type annotation and pseudobulk aggregation under realistic sparsity.",
+    "order": 3,
+    "planned": false,
+    "task_count": 2
+  },
+  {
+    "id": "qtl",
+    "title": "QTL",
+    "description": "Map genetic effects on expression while controlling population structure and calibrating false discovery.",
+    "order": 4,
+    "planned": false,
+    "task_count": 1
+  },
+  {
+    "id": "networks",
+    "title": "Gene networks",
+    "description": "Infer gene regulatory networks from expression and genotype data, separating direct regulation from latent-confounded correlation.",
+    "order": 5,
+    "planned": false,
+    "task_count": 2
+  },
+  {
+    "id": "fine_mapping",
+    "title": "Fine mapping",
+    "description": "Resolve causal variants from summary statistics and distinguish shared causal signal from coincidental colocalization.",
+    "order": 6,
+    "planned": false,
+    "task_count": 2
+  },
+  {
+    "id": "annotation",
+    "title": "Functional annotation",
+    "description": "Classify variants by regulatory function and estimate stratified heritability enrichment from incomplete public tracks.",
+    "order": 7,
+    "planned": false,
+    "task_count": 2
+  },
+  {
+    "id": "integrative",
+    "title": "Integrative",
+    "description": "Combine bulk, single-cell, genotype and trait data into cell-type-resolved regulatory models and causal estimates.",
+    "order": 8,
+    "planned": true,
+    "task_count": 0
+  }
+]

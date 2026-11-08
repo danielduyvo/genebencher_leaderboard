@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Methodology · GeneBencher</title>
+<meta name="description" content="Scoring, aggregation, baselines, protocol and limitations.">
+<link rel="canonical" href="https://danielduyvo.github.io/genebencher_leaderboard/methodology/">
+<meta property="og:url" content="https://danielduyvo.github.io/genebencher_leaderboard/methodology/">
+<meta property="og:title" content="Methodology · GeneBencher">
+<meta property="og:description" content="Scoring, aggregation, baselines, protocol and limitations.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeneBencher">
+<meta name="theme-color" content="#161616">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="icon" href="../static/logo.svg" type="image/svg+xml">
+<link rel="icon" href="../static/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../static/logo.png">
+<link rel="stylesheet" href="../static/style.css?v=5f438ee1d2">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="../">
+      <img class="wordmark-mark" src="../static/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+      <span class="wordmark-text">GeneBencher</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../leaderboard/">Leaderboard</a></li><li><a href="../models/">Models</a></li><li><a href="../tasks/">Tasks</a></li><li><a href="../sections/">Sections</a></li><li><a href="../compare/">Compare</a></li><li><a href="../methodology/" aria-current="page">Methodology</a></li><li><a href="../data/">Data</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="edition-bar">
+    <div class="shell edition-bar-inner">
+      <span class="tag tag-exploratory">Exploratory</span>
+      <a href="../editions/pilot-2026-11-07/">First pilot</a>
+      <span class="edition-meta">2026-11-07 · 20 min per task · 1 seed</span>
+    </div>
+  </div>
+  
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="shell">
+  
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    
+    <li>Home</li>
+    
+    <li>Methodology</li>
+    
+  </ol>
+</nav>
+
+
+  <header class="page-head">
+    <p class="eyebrow">Methods</p>
+    <h1>Methodology</h1>
+    <p class="lead">What is measured, how a task becomes a score, and what this dashboard deliberately does not claim.</p>
+  </header>
+
+  <div class="prose">
+    <section>
+      <h2>1. What the benchmark measures</h2>
+      <p>GeneBencher asks an agent to perform a complete analysis on a synthetic but biologically structured cohort: genotype QC, bulk differential expression, single-cell annotation, cis-eQTL mapping, network inference, fine mapping and functional annotation. Inputs are mounted read-only; truth is never mounted. A task is graded by a task-specific grader on the declared deliverables.</p>
+      <p>The generator is synthetic by design. It gives a known truth and controlled confounders without shipping human data. The trade-off is that absolute scores describe performance on this generator, not on every real dataset.</p>
+    </section>
+
+    <section>
+      <h2>2. From sub-scores to a task score</h2>
+      <p>Each task declares a pass threshold and a set of weights that sum to one. A sub-score is in [0, 1]. The task score is the weighted sum:</p>
+      <pre class="formula"><code>task_score = Σ (weight_i × sub_score_i)</code></pre>
+      <p>A task passes when its score is at least the declared threshold. Thresholds are public on the task page. They are not uniform: tasks whose reference solution is intentionally hard to separate from a naive baseline use a lower bar, stated in the task manifest.</p>
+    </section>
+
+    <section>
+      <h2>3. From task scores to a section and overall score</h2>
+      <p>A section score is the arithmetic mean of its task scores. The overall score is the macro-average of section scores:</p>
+      <pre class="formula"><code>section_s = mean(task_scores in s)
+overall   = mean(section_scores)</code></pre>
+      <p>The macro-average gives every section equal weight, so a section with many tasks cannot dominate. Sections with no implemented tasks are omitted, not imputed. A model is ranked only when it covers every task in the edition; partial runs are listed separately.</p>
+      <p>The Go exporter recomputes these values from the published task rows and fails if they differ from the harness's own <code>suite.json</code> by more than <code>1e-9</code>. The computation is small but duplicated on purpose: the site cannot drift from the harness silently.</p>
+    </section>
+
+    <section>
+      <h2>4. Calibration baselines</h2>
+      <p>Every task has four reference solvers:</p>
+      <table class="data-table compact">
+        <caption>Reference solvers shown on task pages.</caption>
+        <thead><tr><th scope="col">Solver</th><th scope="col">What it is</th><th scope="col">Why it is shown</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Null</th><td>Valid but uninformative output.</td><td>The floor: a schema-valid answer with no signal.</td></tr>
+          <tr><th scope="row">Naive</th><td>A plausible default analysis without the domain correction the task tests.</td><td>What a competent but uncritical pipeline gets.</td></tr>
+          <tr><th scope="row">Reference solution</th><td>The reference implementation shipped with the task.</td><td>A realistic strong baseline, not a ceiling.</td></tr>
+          <tr><th scope="row">Oracle</th><td>Truth-aware calibration run.</td><td>The achievable ceiling. Never mounted for a solve.</td></tr>
+        </tbody>
+      </table>
+      <p>Baselines are context, not ranked models. A model score below the naive baseline means the attempted correction made things worse.</p>
+    </section>
+
+    <section>
+      <h2>5. Timeouts, errors and zeros</h2>
+      <p>A timeout or harness error is labelled in the status column. Its row keeps any partial score the harness produced, and is zero when no valid output existed. The dashboard never rewrites a timeout into a clean zero, so a model that was cut off is distinguishable from one that answered and scored zero. This matters for interpretation: a model that is accurate but too slow is not the same as a model that is wrong.</p>
+    </section>
+
+    <section>
+      <h2>6. Editions and comparability</h2>
+      <p>An edition fixes the dataset, benchmark version, task set, time cap and protocol. Scores are comparable only inside one edition. A changed task, dataset or protocol creates a new edition, and the old edition remains archived with its original caveats. The dashboard never merges runs across protocols to increase coverage.</p>
+    </section>
+
+    <section>
+      <h2>7. What is public, and what is not</h2>
+      <p>Public: task titles and descriptions, scoring weights, pass thresholds, sub-scores, calibration baselines, timing, protocol and dataset provenance.</p>
+      <p>Not public: prompts, task inputs, grader code, truth tables, agent transcripts, work directories and diagnostics that contain truth-side counts. The exporter uses an explicit field allowlist and the public data is decoded with a closed schema. A leak scan runs over the generated site before deployment.</p>
+    </section>
+
+    <section>
+      <h2>8. Limitations of this edition</h2>
+      <ul class="caveat-list">
+        <li>This edition is <strong>Exploratory</strong>: 26 tasks are planned and 20 minutes were allowed per task.</li>
+        <li>The model and the agent harness are confounded. A different harness may change a model's score.</li>
+        <li>There is one seed per task in this edition. Replicate variance is not yet estimated, so small differences should not be over-read.</li>
+        <li>Timing comes from artifacts and, for model wall-clock, from timestamps. It is indicative, not a controlled latency benchmark.</li>
+        <li>The generator is synthetic. Absolute performance on real data may differ, and tasks emphasize method choice and statistical honesty rather than large-scale engineering.</li>
+      </ul>
+    </section>
+
+    <section>
+      <h2>9. Reproducibility</h2>
+      <p>Each edition publishes the dataset id, release checksum, generator commit, harness commit, dirty-tree flag, time cap, concurrency, seed count and backend on its edition page. The dashboard itself is a deterministic build: the same public data produces byte-identical HTML. The public data files are downloadable from the <a href="../data/">data page</a>.</p>
+    </section>
+
+    <section>
+      <h2>10. Citation</h2>
+      <p>Not going to lie, why would you want to cite this? I guess if you want to cite this, you can name the edition, e.g., <em>GeneBencher, First pilot (pilot-2026-11-07), 2026-11-07</em>. Include the dataset id and release checksum when the claim depends on the data.</p>
+    </section>
+  </div>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div>
+      <p class="footer-name">GeneBencher</p>
+      <p class="footer-note">A public leaderboard for AI agents on bioinformatics, omics and statistical genetics.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../methodology/">Methodology</a>
+      <a href="../data/">Data</a>
+      <a href="../editions/">Editions</a>
+      <a href="https://github.com/danielduyvo/genebencher_leaderboard" rel="noopener">Site repository</a>
+    </div>
+  </div>
+  <div class="shell footer-legal">
+    <p>GeneBencher benchmark. Scores are edition-specific and are not comparable across editions. Content licensed MIT.</p>
+  </div>
+</footer>
+
+<script src="../static/app.js?v=b8e5dd60d9" defer></script>
+</body>
+</html>

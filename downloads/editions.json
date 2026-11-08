@@ -1,0 +1,42 @@
+[
+  {
+    "id": "pilot-2026-11-07",
+    "title": "First pilot",
+    "date": "2026-11-07",
+    "status": "exploratory",
+    "status_label": "Exploratory",
+    "summary": "Four agent/model combinations on the eleven implemented tasks, with a 20-minute cap per task. Published as an exploratory edition to show the scoring pipeline and task coverage; it is not a final ranking.",
+    "tasks_planned": 26,
+    "protocol": {
+      "timeout_min_per_task": 20,
+      "concurrency_per_model": 2,
+      "suite_budget_min": 240,
+      "seeds": 1,
+      "backend": "Local subprocess"
+    },
+    "provenance": {
+      "dataset_id": "omicsbench-public-20261020",
+      "release_sha256": "727eec4dfa87b421693db7cf4ca89e4ec0ad6f82fbce2fea416752fe836b9296",
+      "generator_commit": "bb9d43c",
+      "git_commit": "d494e5eb2ab4277d2f3f9717a8aec62c4e1f821e",
+      "git_dirty": true,
+      "checksum_ok": true
+    },
+    "caveats": [
+      "Eleven of the twenty-six planned tasks are implemented, so the overall score describes this subset, not the full benchmark.",
+      "Each task had a 20-minute wall-clock cap, below the 120-minute task budget declared in the task manifests. Slow but correct approaches may be cut off.",
+      "The run used a dirty working tree at commit d494e5e, with uncommitted harness changes.",
+      "The local subprocess backend was used instead of the container backend.",
+      "Runtimes are taken from artifacts; model wall-clock time is estimated from result timestamps, not measured by the worker.",
+      "One seed per task. Replicate variance is not yet estimated.",
+      "The comparison confounds model capability with agent-harness behaviour.",
+      "MiMo-V2.6-Flash hit the cap on ten of eleven tasks. A timeout is labelled as a timeout and keeps any partial score the harness could grade, which for MiMo was zero. It is never silently rewritten into an ordinary zero."
+    ],
+    "supplementary": [
+      {
+        "id": "mimo-retry-2026-11-08",
+        "text": "A three-task MiMo-V2.6-Flash retry at a 30-minute cap exists but is not merged into this edition because it covers different tasks under a different protocol."
+      }
+    ]
+  }
+]

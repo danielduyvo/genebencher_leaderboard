@@ -1,0 +1,4 @@
+{"edition_id":"pilot-2026-11-07","model_slug":"gemini-3.8-flash","model_wallclock_sec":4146,"note":"backfilled from 20-minute pilot artifacts; model wall estimated from result timestamps"}
+{"edition_id":"pilot-2026-11-07","model_slug":"deepseek-v4.1-flash","model_wallclock_sec":3576,"note":"backfilled from 20-minute pilot artifacts; model wall estimated from result timestamps"}
+{"edition_id":"pilot-2026-11-07","model_slug":"glm-5.3-flash","model_wallclock_sec":3768,"note":"backfilled from 20-minute pilot artifacts; model wall estimated from result timestamps"}
+{"edition_id":"pilot-2026-11-07","model_slug":"mimo-v2.6-flash","model_wallclock_sec":7014,"note":"backfilled from 20-minute pilot artifacts; model wall estimated from result timestamps"}

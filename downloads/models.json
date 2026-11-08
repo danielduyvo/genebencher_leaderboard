@@ -1,0 +1,46 @@
+[
+  {
+    "slug": "gemini-3.8-flash",
+    "label": "Gemini 3.8 Flash",
+    "model_id": "gemini-3.8-flash-high",
+    "agent": "agy",
+    "effort": "high",
+    "vendor": "Google",
+    "family": "Gemini",
+    "color": "#0f62fe",
+    "notes": "Run through the agy agent harness at high reasoning effort."
+  },
+  {
+    "slug": "deepseek-v4.1-flash",
+    "label": "DeepSeek V4.1 Flash",
+    "model_id": "opencode-go/deepseek-v4.1-flash#high",
+    "agent": "opencode",
+    "effort": "high",
+    "vendor": "DeepSeek",
+    "family": "DeepSeek",
+    "color": "#8a3ffc",
+    "notes": "Run through the OpenCode harness at high reasoning effort."
+  },
+  {
+    "slug": "glm-5.3-flash",
+    "label": "GLM-5.3-Flash",
+    "model_id": "opencode-go/glm-5.3-flash#high",
+    "agent": "opencode",
+    "effort": "high",
+    "vendor": "Zhipu AI",
+    "family": "GLM",
+    "color": "#007d79",
+    "notes": "Run through the OpenCode harness at high reasoning effort."
+  },
+  {
+    "slug": "mimo-v2.6-flash",
+    "label": "MiMo-V2.6-Flash",
+    "model_id": "opencode-go/mimo-v2.6-flash",
+    "agent": "opencode",
+    "effort": "default",
+    "vendor": "Xiaomi",
+    "family": "MiMo",
+    "color": "#ee5396",
+    "notes": "Run through the OpenCode harness at default reasoning effort. Ten of eleven tasks hit the 20-minute cap in this edition."
+  }
+]
