@@ -1,0 +1,670 @@
+[
+  {
+    "id": "GQC-01",
+    "title": "Sample-level genotype QC",
+    "section": "genotype_qc",
+    "type": "pipeline",
+    "difficulty": "medium",
+    "description": "Flag sample-level genotype defects and return a clean sample set. Scored on per-class F1, false removals, defect-severity ranking and runtime, so flagging everything is not a winning strategy.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "per_class_f1",
+        "value": 0.55
+      },
+      {
+        "name": "false_removal_rate",
+        "value": 0.25
+      },
+      {
+        "name": "severity_auprc",
+        "value": 0.1
+      },
+      {
+        "name": "runtime",
+        "value": 0.1
+      }
+    ]
+  },
+  {
+    "id": "GQC-02",
+    "title": "Relatedness, duplicates and cryptic relatives",
+    "section": "genotype_qc",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Separate duplicates, first-degree relatives and cryptic relatedness from unrelated pairs. Scored on pair ranking, kinship accuracy and relatedness class F1.",
+    "pass_threshold": 0.55,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "pair_auprc",
+        "value": 0.45
+      },
+      {
+        "name": "kin_coefficient",
+        "value": 0.3
+      },
+      {
+        "name": "class_f1",
+        "value": 0.25
+      }
+    ]
+  },
+  {
+    "id": "GQC-03",
+    "title": "Ancestry, outliers and batch-artifact SNPs",
+    "section": "genotype_qc",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Detect ancestry outliers and batch-artifact variants while estimating ancestry structure. Scored on outlier F1, ancestry and principal-component agreement, and artifact ranking.",
+    "pass_threshold": 0.5,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "outlier_f1",
+        "value": 0.3
+      },
+      {
+        "name": "ancestry_correlation",
+        "value": 0.25
+      },
+      {
+        "name": "artifact_auprc",
+        "value": 0.35
+      },
+      {
+        "name": "pc_correlation",
+        "value": 0.1
+      }
+    ]
+  },
+  {
+    "id": "GQC-04",
+    "title": "Genotype-RNA record swaps",
+    "section": "genotype_qc",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Find genotype-to-RNA record swaps across two data types. Scored on the paired-sample F1 and the ranking of suspect pairs.",
+    "pass_threshold": 0.3,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "pair_f1",
+        "value": 0.6
+      },
+      {
+        "name": "ranking_ap",
+        "value": 0.4
+      }
+    ]
+  },
+  {
+    "id": "BULK-01",
+    "title": "Bulk RNA-seq quantification and differential expression",
+    "section": "bulk_rna",
+    "type": "pipeline",
+    "difficulty": "medium",
+    "description": "Quantify raw reads, assemble a count matrix and test a condition contrast across replicates. Scored on DE ranking, false-discovery control, effect accuracy and recall, so a permissive test does not win.",
+    "pass_threshold": 0.2,
+    "time_budget_min": 240,
+    "weights": [
+      {
+        "name": "de_auprc",
+        "value": 0.45
+      },
+      {
+        "name": "fdr_control",
+        "value": 0.2
+      },
+      {
+        "name": "logfc_accuracy",
+        "value": 0.2
+      },
+      {
+        "name": "recall",
+        "value": 0.15
+      }
+    ]
+  },
+  {
+    "id": "BULK-02",
+    "title": "Isoform quantification and differential transcript usage",
+    "section": "bulk_rna",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Quantify transcript isoforms and detect differential transcript usage. Scored on isoform abundance accuracy, DTU ranking and delta-PSI accuracy.",
+    "pass_threshold": 0.45,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "isoform_r2",
+        "value": 0.45
+      },
+      {
+        "name": "dtu_auprc",
+        "value": 0.35
+      },
+      {
+        "name": "delta_psi_accuracy",
+        "value": 0.2
+      }
+    ]
+  },
+  {
+    "id": "BULK-03",
+    "title": "Latent-factor-adjusted differential expression",
+    "section": "bulk_rna",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Differential expression adjusted for latent structure. The naive analysis finds many latent-driven genes; the task rewards recovering the real contrast without removing true effects.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "de_auprc",
+        "value": 0.5
+      },
+      {
+        "name": "false_removal",
+        "value": 0.2
+      },
+      {
+        "name": "effect_accuracy",
+        "value": 0.15
+      },
+      {
+        "name": "latent_recovery",
+        "value": 0.15
+      }
+    ]
+  },
+  {
+    "id": "SC-01",
+    "title": "Cell calling, doublets and ambient RNA",
+    "section": "single_cell",
+    "type": "pipeline",
+    "difficulty": "medium",
+    "description": "Call cells from raw barcodes, remove doublets and correct ambient RNA. Scored on cell-call F1, doublet ranking and ambient-profile agreement.",
+    "pass_threshold": 0.5,
+    "time_budget_min": 240,
+    "weights": [
+      {
+        "name": "cell_call_f1",
+        "value": 0.4
+      },
+      {
+        "name": "doublet_auprc",
+        "value": 0.35
+      },
+      {
+        "name": "ambient_correlation",
+        "value": 0.25
+      }
+    ]
+  },
+  {
+    "id": "SC-02",
+    "title": "Cell-type annotation",
+    "section": "single_cell",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Annotate cells against a labelled reference atlas at granular and major resolution. Scored on accuracy, macro-F1, adjusted Rand index and major-class accuracy.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "accuracy",
+        "value": 0.4
+      },
+      {
+        "name": "major_accuracy",
+        "value": 0.2
+      },
+      {
+        "name": "macro_f1",
+        "value": 0.25
+      },
+      {
+        "name": "ari",
+        "value": 0.15
+      }
+    ]
+  },
+  {
+    "id": "SC-03",
+    "title": "Pseudobulk and cell-type composition",
+    "section": "single_cell",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Aggregate sparse single-cell libraries into pseudobulk profiles and recover cell-type composition. Scored on composition distance, composition r-squared and pseudobulk correlation.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "composition_l1",
+        "value": 0.45
+      },
+      {
+        "name": "composition_r2",
+        "value": 0.25
+      },
+      {
+        "name": "pseudobulk_correlation",
+        "value": 0.3
+      }
+    ]
+  },
+  {
+    "id": "QTL-01",
+    "title": "Cis-eQTL mapping with population structure",
+    "section": "qtl",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Map cis-eQTLs while controlling population structure and calibrating false discovery. Scored on power at a fixed FDR, calibration, effect accuracy and sign accuracy.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "power_at_fdr",
+        "value": 0.45
+      },
+      {
+        "name": "fdr_calibration",
+        "value": 0.25
+      },
+      {
+        "name": "effect_accuracy",
+        "value": 0.2
+      },
+      {
+        "name": "sign_accuracy",
+        "value": 0.1
+      }
+    ]
+  },
+  {
+    "id": "QTL-02",
+    "title": "Splicing QTL mapping",
+    "section": "qtl",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Map splicing QTLs while controlling false discovery. Scored on power at a fixed FDR, effect accuracy and calibration.",
+    "pass_threshold": 0.5,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "power",
+        "value": 0.45
+      },
+      {
+        "name": "effect_accuracy",
+        "value": 0.35
+      },
+      {
+        "name": "fdr_calibration",
+        "value": 0.2
+      }
+    ]
+  },
+  {
+    "id": "QTL-03",
+    "title": "Conditional eQTLs and multiple causal variants",
+    "section": "qtl",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Resolve multiple causal variants at a locus with conditional analysis. Scored on primary and secondary recall, precision and posterior inclusion ranking.",
+    "pass_threshold": 0.4,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "secondary_recall",
+        "value": 0.4
+      },
+      {
+        "name": "primary_recall",
+        "value": 0.2
+      },
+      {
+        "name": "precision",
+        "value": 0.2
+      },
+      {
+        "name": "pip_auprc",
+        "value": 0.2
+      }
+    ]
+  },
+  {
+    "id": "QTL-04",
+    "title": "Trans-eQTL hotspots and core-gene ranking",
+    "section": "qtl",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Find trans-eQTL hotspots and rank their core genes. Scored on hotspot ranking, core-gene recovery and trans false-discovery control.",
+    "pass_threshold": 0.45,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "hotspot_auprc",
+        "value": 0.3
+      },
+      {
+        "name": "core_auroc",
+        "value": 0.3
+      },
+      {
+        "name": "core_recall_at_k",
+        "value": 0.2
+      },
+      {
+        "name": "trans_fdr",
+        "value": 0.2
+      }
+    ]
+  },
+  {
+    "id": "NET-01",
+    "title": "Co-expression network with latent confounders",
+    "section": "networks",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Infer a co-expression network in the presence of latent confounders. Scored on direct-edge recovery, path recovery, sign accuracy and control of latent-driven false positives.",
+    "pass_threshold": 0.35,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "direct_auprc",
+        "value": 0.55
+      },
+      {
+        "name": "path_auprc",
+        "value": 0.1
+      },
+      {
+        "name": "sign_accuracy",
+        "value": 0.2
+      },
+      {
+        "name": "latent_fpr_control",
+        "value": 0.15
+      }
+    ]
+  },
+  {
+    "id": "NET-02",
+    "title": "Confounder-adjusted GRN inference across replicates",
+    "section": "networks",
+    "type": "method",
+    "difficulty": "hard",
+    "description": "A method task evaluated on five held-out replicates with different graph topologies, confounder strengths and latent density. Scored on the mean, with a variance penalty for unstable methods.",
+    "pass_threshold": 0.38,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "direct_auprc",
+        "value": 0.55
+      },
+      {
+        "name": "celltype_auprc",
+        "value": 0.2
+      },
+      {
+        "name": "sign_accuracy",
+        "value": 0.2
+      },
+      {
+        "name": "path_auprc",
+        "value": 0.05
+      }
+    ]
+  },
+  {
+    "id": "NET-03",
+    "title": "Directed network, latent confounders and core genes",
+    "section": "networks",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Infer a directed network with latent confounders and identify core genes. Scored on edge direction, hub and core-gene ranking, and control of latent-driven edges.",
+    "pass_threshold": 0.5,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "direction_accuracy",
+        "value": 0.3
+      },
+      {
+        "name": "hub_auroc",
+        "value": 0.25
+      },
+      {
+        "name": "core_auroc",
+        "value": 0.25
+      },
+      {
+        "name": "latent_auroc",
+        "value": 0.2
+      }
+    ]
+  },
+  {
+    "id": "FM-01",
+    "title": "Cis-eQTL fine mapping",
+    "section": "fine_mapping",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Build 95% credible sets and posterior inclusion probabilities from eQTL summary statistics and an LD panel. Scored on coverage, set size, PIP ranking and calibration.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "credible_set_coverage",
+        "value": 0.4
+      },
+      {
+        "name": "set_size",
+        "value": 0.2
+      },
+      {
+        "name": "pip_auprc",
+        "value": 0.3
+      },
+      {
+        "name": "pip_calibration",
+        "value": 0.1
+      }
+    ]
+  },
+  {
+    "id": "FM-02",
+    "title": "eQTL-GWAS colocalization",
+    "section": "fine_mapping",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Distinguish shared causal signal from coincidental overlap using eQTL and GWAS summary statistics. Scored on H0-H4 hypothesis accuracy, H4 F1 and posterior quality.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "hypothesis_accuracy",
+        "value": 0.45
+      },
+      {
+        "name": "h4_f1",
+        "value": 0.3
+      },
+      {
+        "name": "true_posterior",
+        "value": 0.25
+      }
+    ]
+  },
+  {
+    "id": "FM-03",
+    "title": "Expression prediction and TWAS",
+    "section": "fine_mapping",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Predict expression from genotype and use it for a transcriptome-wide association scan. Scored on expression accuracy, causal-gene recall and false-discovery control, so a well-calibrated negative result is not rewarded as a discovery.",
+    "pass_threshold": 0.3,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "expression_r2",
+        "value": 0.2
+      },
+      {
+        "name": "causal_recall",
+        "value": 0.5
+      },
+      {
+        "name": "twas_fdr",
+        "value": 0.3
+      }
+    ]
+  },
+  {
+    "id": "ANN-01",
+    "title": "Functional annotation of variants",
+    "section": "annotation",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Classify variants by regulatory function from incomplete chromatin, conservation and motif tracks. Scored on macro-F1 and motif-disruption ranking, so a model must separate real signal from missing annotation.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "macro_f1",
+        "value": 0.5
+      },
+      {
+        "name": "motif_auprc",
+        "value": 0.3
+      },
+      {
+        "name": "disruption_accuracy",
+        "value": 0.1
+      },
+      {
+        "name": "coverage",
+        "value": 0.1
+      }
+    ]
+  },
+  {
+    "id": "ANN-02",
+    "title": "Stratified heritability enrichment",
+    "section": "annotation",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Estimate stratified heritability enrichment across annotation categories and report calibrated uncertainty. Scored on enrichment error, share error and confidence-interval coverage.",
+    "pass_threshold": 0.6,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "enrichment_error",
+        "value": 0.5
+      },
+      {
+        "name": "share_error",
+        "value": 0.3
+      },
+      {
+        "name": "ci_coverage",
+        "value": 0.2
+      }
+    ]
+  },
+  {
+    "id": "INT-01",
+    "title": "Cell-type-specific eQTL mapping",
+    "section": "integrative",
+    "type": "method",
+    "difficulty": "hard",
+    "description": "Map cell-type-specific expression QTLs from pseudobulk data. Scored on cell-type-specific ranking, effect agreement and false-discovery calibration.",
+    "pass_threshold": 0.4,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "cell_type_auprc",
+        "value": 0.45
+      },
+      {
+        "name": "effect_correlation",
+        "value": 0.3
+      },
+      {
+        "name": "fdr_calibration",
+        "value": 0.25
+      }
+    ]
+  },
+  {
+    "id": "INT-02",
+    "title": "Mendelian randomization of expression on traits",
+    "section": "integrative",
+    "type": "analysis",
+    "difficulty": "medium",
+    "description": "Estimate the causal effect of expression on a trait with Mendelian randomisation. Scored on effect bias, confidence-interval coverage and type-one error, so a confident but miscalibrated estimate loses.",
+    "pass_threshold": 0.4,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "effect_bias",
+        "value": 0.45
+      },
+      {
+        "name": "ci_coverage",
+        "value": 0.4
+      },
+      {
+        "name": "type1_error",
+        "value": 0.15
+      }
+    ]
+  },
+  {
+    "id": "INT-03",
+    "title": "Latent expression factors and loadings",
+    "section": "integrative",
+    "type": "analysis",
+    "difficulty": "hard",
+    "description": "Recover latent expression factors and their loadings across samples. Scored on factor and loading correlation, with sign and scale ambiguity handled by the grader.",
+    "pass_threshold": 0.45,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "factor_correlation",
+        "value": 0.6
+      },
+      {
+        "name": "loading_correlation",
+        "value": 0.4
+      }
+    ]
+  },
+  {
+    "id": "INT-04",
+    "title": "Cell-type-resolved regulatory programs",
+    "section": "integrative",
+    "type": "method",
+    "difficulty": "hard",
+    "description": "Infer cell-type-resolved regulatory programs from multi-omic data. Scored on program ranking, cell-type specificity and recall.",
+    "pass_threshold": 0.2,
+    "time_budget_min": 120,
+    "weights": [
+      {
+        "name": "program_auprc",
+        "value": 0.5
+      },
+      {
+        "name": "cell_type_specificity",
+        "value": 0.3
+      },
+      {
+        "name": "program_recall",
+        "value": 0.2
+      }
+    ]
+  }
+]

@@ -1,0 +1,43 @@
+[
+  {
+    "id": "benchmark-2026-11-09",
+    "title": "Full benchmark",
+    "date": "2026-11-17",
+    "status": "final",
+    "status_label": "Final",
+    "summary": "Six models on all 26 tasks with a 60-minute cap per task. All six completed every task and are ranked. One seed per task.",
+    "tasks_planned": 26,
+    "protocol": {
+      "timeout_min_per_task": 60,
+      "concurrency_per_model": 1,
+      "suite_budget_min": 10080,
+      "seeds": 1,
+      "backend": "Local subprocess"
+    },
+    "provenance": {
+      "dataset_id": "omicsbench-public-public",
+      "release_sha256": "5bf3ceb15e3d6a5b7ef1dfbba5d0d7bfd769bf5fd17a7de6c77db05f5c7e658f",
+      "generator_commit": "ef4c03c",
+      "git_commit": "c79964338610b1f097b8908193e1595faeb79f12",
+      "git_dirty": false,
+      "checksum_ok": true
+    },
+    "caveats": [
+      "Model coverage is a budget-limited convenience sample, not a survey of the strongest available models. The six ranked runs are relatively low-cost entries, mostly Flash/Free tiers and free previews; no lab's flagship frontier model was run. The field is limited to what could be funded from one shared weekly OpenCode Go allowance. Gemini 4 Argon, Grok 4.7 and Kimi K3.1 Pro were dropped before testing because each could consume most of that allowance in a few tasks. The benchmark is also still early — this is its first full edition, and the task set, rubrics and protocol are being refined. Treat the ranking as a preliminary comparison of affordable models, not as evidence about the best available model.",
+      "Hy4, MiniMax M3.1 Flash and GLM-5.3 Flash are not published. The shared weekly Go allowance ran out before they could attempt most tasks, so their partial scores would not be a fair comparison.",
+      "LongCat 2.5 Free is not published either. Its provider rate limited 24 of 26 tasks, so only two annotation tasks were measured. A 0.831 average over those two tasks would misrepresent the model, and the other 24 tasks were never attempted.",
+      "The 60-minute wall-clock cap is part of the protocol. A task that does not finish in time is a failure in the strict score; slow but correct approaches can be cut off.",
+      "A task score measures the rubric's deliverables, not how hard the analysis is to code. Colocalization (FM-02) is simple to implement but averaged 0.377 across the ranked models, because the rubric scores calibrated statistical output rather than whether the pipeline runs.",
+      "One seed per task. Replicate variance is not estimated.",
+      "The comparison confounds model capability with agent-harness behaviour. Gemini 3.8 Flash runs through agy, the other models through OpenCode.",
+      "The local subprocess adapter was used instead of the container backend.",
+      "Free OpenCode Go models cost no allowance; paid models draw on one shared account-wide weekly budget, which is why the run was paused and resumed across two weeks."
+    ],
+    "supplementary": [
+      {
+        "id": "pilot-2026-11-07",
+        "text": "The earlier pilot edition covers eleven tasks at a 20-minute cap and is not comparable with this edition."
+      }
+    ]
+  }
+]

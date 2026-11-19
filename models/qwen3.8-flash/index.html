@@ -1,0 +1,580 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Qwen3.8 Flash · GeneBencher</title>
+<meta name="description" content="Qwen3.8 Flash profile, task scores and timing.">
+<link rel="canonical" href="https://danielduyvo.github.io/genebencher_leaderboard/models/qwen3.8-flash/">
+<meta property="og:url" content="https://danielduyvo.github.io/genebencher_leaderboard/models/qwen3.8-flash/">
+<meta property="og:title" content="Qwen3.8 Flash · GeneBencher">
+<meta property="og:description" content="Qwen3.8 Flash profile, task scores and timing.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeneBencher">
+<meta name="theme-color" content="#161616">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="icon" href="../../static/logo.svg" type="image/svg+xml">
+<link rel="icon" href="../../static/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../static/logo.png">
+<link rel="stylesheet" href="../../static/style.css?v=4687cbea59">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="../../">
+      <img class="wordmark-mark" src="../../static/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+      <span class="wordmark-text">GeneBencher</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../../leaderboard/">Leaderboard</a></li><li><a href="../../models/" aria-current="page">Models</a></li><li><a href="../../tasks/">Tasks</a></li><li><a href="../../sections/">Sections</a></li><li><a href="../../compare/">Compare</a></li><li><a href="../../methodology/">Methodology</a></li><li><a href="../../cost/">Cost</a></li><li><a href="../../data/">Data</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="edition-bar">
+    <div class="shell edition-bar-inner">
+      <span class="tag tag-final">Final</span>
+      <a href="../../editions/benchmark-2026-11-09/">Full benchmark</a>
+      <span class="edition-meta">2026-11-17 · 60 min per task · 1 seed</span>
+    </div>
+  </div>
+  
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="shell">
+  
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    
+    <li>Home</li>
+    
+    <li><a href="../../models/">Models</a></li>
+    
+    <li>Qwen3.8 Flash</li>
+    
+  </ol>
+</nav>
+
+
+  <header class="page-head model-head">
+    <div>
+      <p class="eyebrow">Alibaba · Qwen</p>
+      <h1>Qwen3.8 Flash</h1>
+      <p class="lead">Run through the OpenCode harness at xhigh reasoning effort, the highest level the model exposes.</p>
+      <div class="tag-row">
+        <span class="tag tag-neutral">opencode harness</span>
+        <span class="tag tag-neutral">xhigh effort</span>
+        <span class="tag tag-neutral mono">opencode-go/qwen3.8-flash#xhigh</span>
+        
+        <span class="tag status-error">3 errors</span>
+        
+      </div>
+    </div>
+    <div class="headline-score">
+      <p class="headline-rank">Rank 4 of 6</p>
+      <p class="headline-number">0.522</p>
+      <p class="headline-label">overall · 18 of 26 graded passed</p>
+      <meter class="meter" min="0" max="1" value="0.5215919686564622" aria-hidden="true"></meter>
+    </div>
+  </header>
+
+  
+
+  <section class="section-block" aria-labelledby="profile-heading">
+    <div class="section-head">
+      <div>
+        <h2 id="profile-heading">Section profile</h2>
+        <p class="section-sub">Section score is the mean of its tasks. The overall score is the macro-average of these values.</p>
+      </div>
+    </div>
+    <div class="profile">
+      
+      
+      <div class="profile-row">
+        <a class="profile-label" href="../../sections/genotype_qc/">Genotype QC</a>
+        <meter class="meter" min="0" max="1" value="0.5364632434573413" aria-hidden="true"></meter>
+        <span class="profile-value">0.536</span>
+      </div>
+      
+      
+      
+      <div class="profile-row">
+        <a class="profile-label" href="../../sections/bulk_rna/">Bulk RNA</a>
+        <meter class="meter" min="0" max="1" value="0.3609268857782196" aria-hidden="true"></meter>
+        <span class="profile-value">0.361</span>
+      </div>
+      
+      
+      
+      <div class="profile-row">
+        <a class="profile-label" href="../../sections/single_cell/">Single cell</a>
+        <meter class="meter" min="0" max="1" value="0.636000130351951" aria-hidden="true"></meter>
+        <span class="profile-value">0.636</span>
+      </div>
+      
+      
+      
+      <div class="profile-row">
+        <a class="profile-label" href="../../sections/qtl/">QTL</a>
+        <meter class="meter" min="0" max="1" value="0.6449130254475948" aria-hidden="true"></meter>
+        <span class="profile-value">0.645</span>
+      </div>
+      
+      
+      
+      <div class="profile-row">
+        <a class="profile-label" href="../../sections/networks/">Gene networks</a>
+        <meter class="meter" min="0" max="1" value="0.44521648855822066" aria-hidden="true"></meter>
+        <span class="profile-value">0.445</span>
+      </div>
+      
+      
+      
+      <div class="profile-row">
+        <a class="profile-label" href="../../sections/fine_mapping/">Fine mapping</a>
+        <meter class="meter" min="0" max="1" value="0.3532155529135077" aria-hidden="true"></meter>
+        <span class="profile-value">0.353</span>
+      </div>
+      
+      
+      
+      <div class="profile-row">
+        <a class="profile-label" href="../../sections/annotation/">Functional annotation</a>
+        <meter class="meter" min="0" max="1" value="0.8273454557023012" aria-hidden="true"></meter>
+        <span class="profile-value">0.827</span>
+      </div>
+      
+      
+      
+      <div class="profile-row">
+        <a class="profile-label" href="../../sections/integrative/">Integrative</a>
+        <meter class="meter" min="0" max="1" value="0.36865496704256184" aria-hidden="true"></meter>
+        <span class="profile-value">0.369</span>
+      </div>
+      
+      
+    </div>
+  </section>
+
+  <section class="section-block" aria-labelledby="tasks-heading">
+    <div class="section-head">
+      <div>
+        <h2 id="tasks-heading">Task scores</h2>
+        <p class="section-sub">Compared with the reference solution for the same task. A timeout is shown as a timeout, not as a plain zero.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Qwen3.8 Flash task scores in Full benchmark.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Task</th>
+            <th scope="col">Section</th>
+            <th scope="col" class="col-score">Score</th>
+            <th scope="col" class="col-score">Reference</th>
+            <th scope="col" class="col-score">vs reference</th>
+            <th scope="col" class="col-pass">Pass</th>
+            <th scope="col" class="col-status">Status</th>
+            <th scope="col" class="col-time">Runtime</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/GQC-01/">GQC-01</a><span class="model-meta">Sample-level genotype QC</span></th>
+            <td><a href="../../sections/genotype_qc/">Genotype QC</a></td>
+            
+            <td class="col-score">0.708<meter class="meter" min="0" max="1" value="0.7077572042394779" aria-hidden="true"></meter></td>
+            <td class="col-score">0.755</td>
+            <td class="col-score"><span class="diff-down">-0.048</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">16m 31s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/GQC-02/">GQC-02</a><span class="model-meta">Relatedness, duplicates and cryptic relatives</span></th>
+            <td><a href="../../sections/genotype_qc/">Genotype QC</a></td>
+            
+            <td class="col-score">0.695<meter class="meter" min="0" max="1" value="0.6952386267327444" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">13m 09s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/GQC-03/">GQC-03</a><span class="model-meta">Ancestry, outliers and batch-artifact SNPs</span></th>
+            <td><a href="../../sections/genotype_qc/">Genotype QC</a></td>
+            
+            <td class="col-score">0.000<meter class="meter" min="0" max="1" value="0" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-error">Error</span></td>
+            
+            <td class="col-time">10m 31s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/GQC-04/">GQC-04</a><span class="model-meta">Genotype-RNA record swaps</span></th>
+            <td><a href="../../sections/genotype_qc/">Genotype QC</a></td>
+            
+            <td class="col-score">0.743<meter class="meter" min="0" max="1" value="0.7428571428571429" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">26m 52s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/BULK-01/">BULK-01</a><span class="model-meta">Bulk RNA-seq quantification and differential expression</span></th>
+            <td><a href="../../sections/bulk_rna/">Bulk RNA</a></td>
+            
+            <td class="col-score">0.482<meter class="meter" min="0" max="1" value="0.48247541888641715" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">25m 15s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/BULK-02/">BULK-02</a><span class="model-meta">Isoform quantification and differential transcript usage</span></th>
+            <td><a href="../../sections/bulk_rna/">Bulk RNA</a></td>
+            
+            <td class="col-score">0.000<meter class="meter" min="0" max="1" value="0" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-error">Error</span></td>
+            
+            <td class="col-time">21m 00s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/BULK-03/">BULK-03</a><span class="model-meta">Latent-factor-adjusted differential expression</span></th>
+            <td><a href="../../sections/bulk_rna/">Bulk RNA</a></td>
+            
+            <td class="col-score">0.600<meter class="meter" min="0" max="1" value="0.6003052384482416" aria-hidden="true"></meter></td>
+            <td class="col-score">0.627</td>
+            <td class="col-score"><span class="diff-down">-0.027</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">10m 24s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/SC-01/">SC-01</a><span class="model-meta">Cell calling, doublets and ambient RNA</span></th>
+            <td><a href="../../sections/single_cell/">Single cell</a></td>
+            
+            <td class="col-score">0.509<meter class="meter" min="0" max="1" value="0.5087625309391225" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">15m 26s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/SC-02/">SC-02</a><span class="model-meta">Cell-type annotation</span></th>
+            <td><a href="../../sections/single_cell/">Single cell</a></td>
+            
+            <td class="col-score">0.657<meter class="meter" min="0" max="1" value="0.6571472184530313" aria-hidden="true"></meter></td>
+            <td class="col-score">0.646</td>
+            <td class="col-score"><span class="diff-up">&#43;0.011</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">13m 38s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/SC-03/">SC-03</a><span class="model-meta">Pseudobulk and cell-type composition</span></th>
+            <td><a href="../../sections/single_cell/">Single cell</a></td>
+            
+            <td class="col-score">0.742<meter class="meter" min="0" max="1" value="0.7420906416636991" aria-hidden="true"></meter></td>
+            <td class="col-score">0.711</td>
+            <td class="col-score"><span class="diff-up">&#43;0.031</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">13m 01s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/QTL-01/">QTL-01</a><span class="model-meta">Cis-eQTL mapping with population structure</span></th>
+            <td><a href="../../sections/qtl/">QTL</a></td>
+            
+            <td class="col-score">0.711<meter class="meter" min="0" max="1" value="0.7108077613009947" aria-hidden="true"></meter></td>
+            <td class="col-score">0.807</td>
+            <td class="col-score"><span class="diff-down">-0.096</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">29m 10s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/QTL-02/">QTL-02</a><span class="model-meta">Splicing QTL mapping</span></th>
+            <td><a href="../../sections/qtl/">QTL</a></td>
+            
+            <td class="col-score">0.945<meter class="meter" min="0" max="1" value="0.9449092548331239" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">18m 47s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/QTL-03/">QTL-03</a><span class="model-meta">Conditional eQTLs and multiple causal variants</span></th>
+            <td><a href="../../sections/qtl/">QTL</a></td>
+            
+            <td class="col-score">0.455<meter class="meter" min="0" max="1" value="0.45536727566018187" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">30m 40s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/QTL-04/">QTL-04</a><span class="model-meta">Trans-eQTL hotspots and core-gene ranking</span></th>
+            <td><a href="../../sections/qtl/">QTL</a></td>
+            
+            <td class="col-score">0.469<meter class="meter" min="0" max="1" value="0.4685678099960783" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">34m 30s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/NET-01/">NET-01</a><span class="model-meta">Co-expression network with latent confounders</span></th>
+            <td><a href="../../sections/networks/">Gene networks</a></td>
+            
+            <td class="col-score">0.379<meter class="meter" min="0" max="1" value="0.37920845246557455" aria-hidden="true"></meter></td>
+            <td class="col-score">0.388</td>
+            <td class="col-score"><span class="diff-down">-0.009</span></td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">15m 08s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/NET-02/">NET-02</a><span class="model-meta">Confounder-adjusted GRN inference across replicates</span></th>
+            <td><a href="../../sections/networks/">Gene networks</a></td>
+            
+            <td class="col-score">0.200<meter class="meter" min="0" max="1" value="0.20028305665413967" aria-hidden="true"></meter></td>
+            <td class="col-score">0.393</td>
+            <td class="col-score"><span class="diff-down">-0.193</span></td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">22m 13s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/NET-03/">NET-03</a><span class="model-meta">Directed network, latent confounders and core genes</span></th>
+            <td><a href="../../sections/networks/">Gene networks</a></td>
+            
+            <td class="col-score">0.756<meter class="meter" min="0" max="1" value="0.7561579565549479" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">23m 50s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/FM-01/">FM-01</a><span class="model-meta">Cis-eQTL fine mapping</span></th>
+            <td><a href="../../sections/fine_mapping/">Fine mapping</a></td>
+            
+            <td class="col-score">0.714<meter class="meter" min="0" max="1" value="0.7141202862339346" aria-hidden="true"></meter></td>
+            <td class="col-score">0.958</td>
+            <td class="col-score"><span class="diff-down">-0.244</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">9m 02s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/FM-02/">FM-02</a><span class="model-meta">eQTL-GWAS colocalization</span></th>
+            <td><a href="../../sections/fine_mapping/">Fine mapping</a></td>
+            
+            <td class="col-score">0.340<meter class="meter" min="0" max="1" value="0.3402069189839902" aria-hidden="true"></meter></td>
+            <td class="col-score">0.647</td>
+            <td class="col-score"><span class="diff-down">-0.307</span></td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">19m 25s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/FM-03/">FM-03</a><span class="model-meta">Expression prediction and TWAS</span></th>
+            <td><a href="../../sections/fine_mapping/">Fine mapping</a></td>
+            
+            <td class="col-score">0.005<meter class="meter" min="0" max="1" value="0.005319453522598302" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">16m 13s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/ANN-01/">ANN-01</a><span class="model-meta">Functional annotation of variants</span></th>
+            <td><a href="../../sections/annotation/">Functional annotation</a></td>
+            
+            <td class="col-score">0.929<meter class="meter" min="0" max="1" value="0.9287751081437665" aria-hidden="true"></meter></td>
+            <td class="col-score">0.920</td>
+            <td class="col-score"><span class="diff-up">&#43;0.009</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">11m 26s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/ANN-02/">ANN-02</a><span class="model-meta">Stratified heritability enrichment</span></th>
+            <td><a href="../../sections/annotation/">Functional annotation</a></td>
+            
+            <td class="col-score">0.726<meter class="meter" min="0" max="1" value="0.7259158032608358" aria-hidden="true"></meter></td>
+            <td class="col-score">0.726</td>
+            <td class="col-score"><span class="diff-flat">0.000</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">41m 16s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/INT-01/">INT-01</a><span class="model-meta">Cell-type-specific eQTL mapping</span></th>
+            <td><a href="../../sections/integrative/">Integrative</a></td>
+            
+            <td class="col-score">0.610<meter class="meter" min="0" max="1" value="0.6103686771521566" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">18m 11s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/INT-02/">INT-02</a><span class="model-meta">Mendelian randomization of expression on traits</span></th>
+            <td><a href="../../sections/integrative/">Integrative</a></td>
+            
+            <td class="col-score">0.453<meter class="meter" min="0" max="1" value="0.4533459198187021" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">13m 07s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/INT-03/">INT-03</a><span class="model-meta">Latent expression factors and loadings</span></th>
+            <td><a href="../../sections/integrative/">Integrative</a></td>
+            
+            <td class="col-score">0.000<meter class="meter" min="0" max="1" value="0" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-error">Error</span></td>
+            
+            <td class="col-time">2m 40s</td>
+          </tr>
+          
+          <tr>
+            <th scope="row"><a href="../../tasks/INT-04/">INT-04</a><span class="model-meta">Cell-type-resolved regulatory programs</span></th>
+            <td><a href="../../sections/integrative/">Integrative</a></td>
+            
+            <td class="col-score">0.411<meter class="meter" min="0" max="1" value="0.41090527119938886" aria-hidden="true"></meter></td>
+            <td class="col-score">—</td>
+            <td class="col-score"><span class="">—</span></td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            
+            <td class="col-time">17m 24s</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <div class="two-col">
+    <section class="section-block">
+      <h2>Timing</h2>
+      <table class="data-table compact">
+        <caption>Timing for Qwen3.8 Flash.</caption>
+        <tbody>
+          <tr><th scope="row">Agent time</th><td>8h 09m</td></tr>
+          <tr><th scope="row">Mean task</th><td>18m 48s</td></tr>
+          <tr><th scope="row">Median task</th><td>16m 57s</td></tr>
+          <tr><th scope="row">Model wall clock</th><td>8h 09m <span class="model-meta">estimated</span></td></tr>
+          <tr><th scope="row">Coverage</th><td>26 of 26 tasks</td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">sum of task wall-clock time</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Interpretation</h2>
+      <p class="section-sub">Scores are edition-specific. A model's rank here describes Full benchmark only: 60-minute cap, 1 seed, Local subprocess backend.</p>
+      <p class="section-sub">The harness is part of the treatment. Qwen3.8 Flash ran through opencode; a different harness may produce a different result for the same model.</p>
+      <p class="section-sub"><a href="../../editions/benchmark-2026-11-09/">Edition provenance</a> · <a href="../../methodology/">Methodology</a></p>
+    </section>
+  </div>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div>
+      <p class="footer-name">GeneBencher</p>
+      <p class="footer-note">A public leaderboard for AI agents on bioinformatics, omics and statistical genetics.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../methodology/">Methodology</a>
+      <a href="../../data/">Data</a>
+      <a href="../../editions/">Editions</a>
+      <a href="https://github.com/danielduyvo/genebencher_leaderboard" rel="noopener">Site repository</a>
+    </div>
+  </div>
+  <div class="shell footer-legal">
+    <p>GeneBencher benchmark. Scores are edition-specific and are not comparable across editions. Content licensed MIT.</p>
+  </div>
+</footer>
+
+<script src="../../static/app.js?v=b8e5dd60d9" defer></script>
+</body>
+</html>

@@ -1,0 +1,215 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Compare · GeneBencher</title>
+<meta name="description" content="Compare models across every benchmark section.">
+<link rel="canonical" href="https://danielduyvo.github.io/genebencher_leaderboard/compare/">
+<meta property="og:url" content="https://danielduyvo.github.io/genebencher_leaderboard/compare/">
+<meta property="og:title" content="Compare · GeneBencher">
+<meta property="og:description" content="Compare models across every benchmark section.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeneBencher">
+<meta name="theme-color" content="#161616">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="icon" href="../static/logo.svg" type="image/svg+xml">
+<link rel="icon" href="../static/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../static/logo.png">
+<link rel="stylesheet" href="../static/style.css?v=4687cbea59">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="../">
+      <img class="wordmark-mark" src="../static/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+      <span class="wordmark-text">GeneBencher</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../leaderboard/">Leaderboard</a></li><li><a href="../models/">Models</a></li><li><a href="../tasks/">Tasks</a></li><li><a href="../sections/">Sections</a></li><li><a href="../compare/" aria-current="page">Compare</a></li><li><a href="../methodology/">Methodology</a></li><li><a href="../cost/">Cost</a></li><li><a href="../data/">Data</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="edition-bar">
+    <div class="shell edition-bar-inner">
+      <span class="tag tag-final">Final</span>
+      <a href="../editions/benchmark-2026-11-09/">Full benchmark</a>
+      <span class="edition-meta">2026-11-17 · 60 min per task · 1 seed</span>
+    </div>
+  </div>
+  
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="shell">
+  
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    
+    <li>Home</li>
+    
+    <li>Compare</li>
+    
+  </ol>
+</nav>
+
+
+  <header class="page-head">
+    <p class="eyebrow">Comparison</p>
+    <h1>Compare models</h1>
+    <p class="lead">Section scores for every ranked model in Full benchmark. All numbers are in the HTML; filtering only hides columns already present.</p>
+  </header>
+
+  <form class="model-filter" data-model-filter aria-label="Model visibility">
+    <fieldset>
+      <legend>Show models</legend>
+      
+      <label class="check"><input type="checkbox" checked data-model-toggle="gemini-3.8-flash"> <span>Gemini 3.8 Flash</span></label>
+      
+      <label class="check"><input type="checkbox" checked data-model-toggle="deepseek-v4.1-flash"> <span>DeepSeek V4.1 Flash</span></label>
+      
+      <label class="check"><input type="checkbox" checked data-model-toggle="crouton-alpha-free"> <span>Crouton Alpha Free</span></label>
+      
+      <label class="check"><input type="checkbox" checked data-model-toggle="qwen3.8-flash"> <span>Qwen3.8 Flash</span></label>
+      
+      <label class="check"><input type="checkbox" checked data-model-toggle="gpt-6-luna"> <span>GPT-6 Luna</span></label>
+      
+      <label class="check"><input type="checkbox" checked data-model-toggle="beam-free"> <span>Beam Free</span></label>
+      
+    </fieldset>
+    <p class="table-note">Without JavaScript every row stays visible. Filtering is a presentation aid, not a data fetch.</p>
+  </form>
+
+  <div class="table-wrap compare-wrap">
+    <table class="data-table compare-table">
+      <caption>Model by section comparison for Full benchmark.</caption>
+      <thead>
+        <tr>
+          <th scope="col">Model</th>
+          <th scope="col" class="col-score">Overall</th>
+          <th scope="col" class="col-pass">Pass rate</th>
+          <th scope="col" class="col-section"><a href="../sections/genotype_qc/">Genotype QC</a></th><th scope="col" class="col-section"><a href="../sections/bulk_rna/">Bulk RNA</a></th><th scope="col" class="col-section"><a href="../sections/single_cell/">Single cell</a></th><th scope="col" class="col-section"><a href="../sections/qtl/">QTL</a></th><th scope="col" class="col-section"><a href="../sections/networks/">Gene networks</a></th><th scope="col" class="col-section"><a href="../sections/fine_mapping/">Fine mapping</a></th><th scope="col" class="col-section"><a href="../sections/annotation/">Functional annotation</a></th><th scope="col" class="col-section"><a href="../sections/integrative/">Integrative</a></th>
+          <th scope="col" class="col-status">Timeouts</th>
+        </tr>
+      </thead>
+      <tbody>
+        
+        
+        <tr data-model="gemini-3.8-flash">
+          <th scope="row" class="model-cell"><a href="../models/gemini-3.8-flash/">Gemini 3.8 Flash</a><span class="model-meta">agy · high</span></th>
+          <td class="col-score"><span class="score-strong">0.587</span><meter class="meter" min="0" max="1" value="0.5868948624482802" aria-hidden="true"></meter></td>
+          <td class="col-pass">73%</td>
+          <td class="cell heat heat-3"><span class="num">0.687</span></td><td class="cell heat heat-2"><span class="num">0.597</span></td><td class="cell heat heat-3"><span class="num">0.670</span></td><td class="cell heat heat-2"><span class="num">0.584</span></td><td class="cell heat heat-2"><span class="num">0.450</span></td><td class="cell heat heat-2"><span class="num">0.444</span></td><td class="cell heat heat-3"><span class="num">0.738</span></td><td class="cell heat heat-2"><span class="num">0.526</span></td>
+          <td class="col-status">0</td>
+        </tr>
+        
+        
+        <tr data-model="deepseek-v4.1-flash">
+          <th scope="row" class="model-cell"><a href="../models/deepseek-v4.1-flash/">DeepSeek V4.1 Flash</a><span class="model-meta">opencode · high</span></th>
+          <td class="col-score"><span class="score-strong">0.572</span><meter class="meter" min="0" max="1" value="0.5724312727953043" aria-hidden="true"></meter></td>
+          <td class="col-pass">77%</td>
+          <td class="cell heat heat-3"><span class="num">0.696</span></td><td class="cell heat heat-2"><span class="num">0.582</span></td><td class="cell heat heat-2"><span class="num">0.444</span></td><td class="cell heat heat-2"><span class="num">0.584</span></td><td class="cell heat heat-2"><span class="num">0.445</span></td><td class="cell heat heat-2"><span class="num">0.402</span></td><td class="cell heat heat-4"><span class="num">0.892</span></td><td class="cell heat heat-2"><span class="num">0.533</span></td>
+          <td class="col-status">0</td>
+        </tr>
+        
+        
+        <tr data-model="crouton-alpha-free">
+          <th scope="row" class="model-cell"><a href="../models/crouton-alpha-free/">Crouton Alpha Free</a><span class="model-meta">opencode · high</span></th>
+          <td class="col-score"><span class="score-strong">0.558</span><meter class="meter" min="0" max="1" value="0.5576142090584436" aria-hidden="true"></meter></td>
+          <td class="col-pass">73%</td>
+          <td class="cell heat heat-3"><span class="num">0.722</span></td><td class="cell heat heat-1"><span class="num">0.348</span></td><td class="cell heat heat-3"><span class="num">0.778</span></td><td class="cell heat heat-3"><span class="num">0.638</span></td><td class="cell heat heat-2"><span class="num">0.541</span></td><td class="cell heat heat-1"><span class="num">0.368</span></td><td class="cell heat heat-3"><span class="num">0.653</span></td><td class="cell heat heat-2"><span class="num">0.413</span></td>
+          <td class="col-status">0</td>
+        </tr>
+        
+        
+        <tr data-model="qwen3.8-flash">
+          <th scope="row" class="model-cell"><a href="../models/qwen3.8-flash/">Qwen3.8 Flash</a><span class="model-meta">opencode · xhigh</span></th>
+          <td class="col-score"><span class="score-strong">0.522</span><meter class="meter" min="0" max="1" value="0.5215919686564622" aria-hidden="true"></meter></td>
+          <td class="col-pass">69%</td>
+          <td class="cell heat heat-2"><span class="num">0.536</span></td><td class="cell heat heat-1"><span class="num">0.361</span></td><td class="cell heat heat-3"><span class="num">0.636</span></td><td class="cell heat heat-3"><span class="num">0.645</span></td><td class="cell heat heat-2"><span class="num">0.445</span></td><td class="cell heat heat-1"><span class="num">0.353</span></td><td class="cell heat heat-4"><span class="num">0.827</span></td><td class="cell heat heat-1"><span class="num">0.369</span></td>
+          <td class="col-status">0</td>
+        </tr>
+        
+        
+        <tr data-model="gpt-6-luna">
+          <th scope="row" class="model-cell"><a href="../models/gpt-6-luna/">GPT-6 Luna</a><span class="model-meta">opencode · high</span></th>
+          <td class="col-score"><span class="score-strong">0.495</span><meter class="meter" min="0" max="1" value="0.49470703501228297" aria-hidden="true"></meter></td>
+          <td class="col-pass">54%</td>
+          <td class="cell heat heat-2"><span class="num">0.578</span></td><td class="cell heat heat-2"><span class="num">0.478</span></td><td class="cell heat heat-3"><span class="num">0.667</span></td><td class="cell heat heat-2"><span class="num">0.542</span></td><td class="cell heat heat-2"><span class="num">0.474</span></td><td class="cell heat heat-2"><span class="num">0.435</span></td><td class="cell heat heat-2"><span class="num">0.472</span></td><td class="cell heat heat-1"><span class="num">0.312</span></td>
+          <td class="col-status">0</td>
+        </tr>
+        
+        
+        <tr data-model="beam-free">
+          <th scope="row" class="model-cell"><a href="../models/beam-free/">Beam Free</a><span class="model-meta">opencode · high</span></th>
+          <td class="col-score"><span class="score-strong">0.430</span><meter class="meter" min="0" max="1" value="0.4303944792673049" aria-hidden="true"></meter></td>
+          <td class="col-pass">42%</td>
+          <td class="cell heat heat-2"><span class="num">0.539</span></td><td class="cell heat heat-0"><span class="num">0.180</span></td><td class="cell heat heat-3"><span class="num">0.634</span></td><td class="cell heat heat-2"><span class="num">0.450</span></td><td class="cell heat heat-1"><span class="num">0.306</span></td><td class="cell heat heat-2"><span class="num">0.436</span></td><td class="cell heat heat-2"><span class="num">0.551</span></td><td class="cell heat heat-1"><span class="num">0.347</span></td>
+          <td class="col-status">0</td>
+        </tr>
+        
+      </tbody>
+      <tfoot>
+        <tr>
+          <th scope="row">Best per section</th>
+          <td colspan="2" class="muted">shown above</td>
+          <td class="muted">Crouton Alpha Free</td><td class="muted">Gemini 3.8 Flash</td><td class="muted">Crouton Alpha Free</td><td class="muted">Qwen3.8 Flash</td><td class="muted">Crouton Alpha Free</td><td class="muted">Gemini 3.8 Flash</td><td class="muted">DeepSeek V4.1 Flash</td><td class="muted">DeepSeek V4.1 Flash</td>
+          <td></td>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+
+  <section class="section-block">
+    <h2>Reading a comparison</h2>
+    <div class="prose-grid">
+      <div>
+        <h3>Sections are equal weight</h3>
+        <p>The overall score is the mean of section scores. A model that is strong in single-cell analysis but weak in networks cannot hide the weak section behind many single-cell tasks.</p>
+      </div>
+      <div>
+        <h3>Few tasks per section</h3>
+        <p>Most sections currently contain one or two implemented tasks. Section scores are therefore coarse, and a single task failure moves the overall score substantially.</p>
+      </div>
+      <div>
+        <h3>Colour is redundant</h3>
+        <p>Heat cells encode score with both a number and a sequential background. The table remains readable in greyscale, with a screen reader, or with CSS disabled.</p>
+      </div>
+      <div>
+        <h3>No cross-edition comparison</h3>
+        <p>This view is scoped to Full benchmark. Protcols, datasets and task versions differ between editions, so a cross-edition comparison would be misleading.</p>
+      </div>
+    </div>
+  </section>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div>
+      <p class="footer-name">GeneBencher</p>
+      <p class="footer-note">A public leaderboard for AI agents on bioinformatics, omics and statistical genetics.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../methodology/">Methodology</a>
+      <a href="../data/">Data</a>
+      <a href="../editions/">Editions</a>
+      <a href="https://github.com/danielduyvo/genebencher_leaderboard" rel="noopener">Site repository</a>
+    </div>
+  </div>
+  <div class="shell footer-legal">
+    <p>GeneBencher benchmark. Scores are edition-specific and are not comparable across editions. Content licensed MIT.</p>
+  </div>
+</footer>
+
+<script src="../static/app.js?v=b8e5dd60d9" defer></script>
+</body>
+</html>

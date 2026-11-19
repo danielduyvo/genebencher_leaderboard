@@ -1,0 +1,6 @@
+{"edition_id":"benchmark-2026-11-09","model_slug":"deepseek-v4.1-flash","model_wallclock_sec":22017.53476074902,"note":"sum of task wall-clock time"}
+{"edition_id":"benchmark-2026-11-09","model_slug":"gpt-6-luna","model_wallclock_sec":10031.377959082994,"note":"sum of task wall-clock time"}
+{"edition_id":"benchmark-2026-11-09","model_slug":"qwen3.8-flash","model_wallclock_sec":29340.896537002,"note":"sum of task wall-clock time"}
+{"edition_id":"benchmark-2026-11-09","model_slug":"crouton-alpha-free","model_wallclock_sec":15722.203816494039,"note":"sum of task wall-clock time"}
+{"edition_id":"benchmark-2026-11-09","model_slug":"beam-free","model_wallclock_sec":8112.8456581250175,"note":"sum of task wall-clock time"}
+{"edition_id":"benchmark-2026-11-09","model_slug":"gemini-3.8-flash","model_wallclock_sec":34883.411,"note":"sum of task wall-clock time"}

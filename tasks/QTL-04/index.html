@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>QTL-04 · GeneBencher</title>
+<meta name="description" content="Trans-eQTL hotspots and core-gene ranking. Scoring weights, calibration baselines and model results.">
+<link rel="canonical" href="https://danielduyvo.github.io/genebencher_leaderboard/tasks/QTL-04/">
+<meta property="og:url" content="https://danielduyvo.github.io/genebencher_leaderboard/tasks/QTL-04/">
+<meta property="og:title" content="QTL-04 · GeneBencher">
+<meta property="og:description" content="Trans-eQTL hotspots and core-gene ranking. Scoring weights, calibration baselines and model results.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeneBencher">
+<meta name="theme-color" content="#161616">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="icon" href="../../static/logo.svg" type="image/svg+xml">
+<link rel="icon" href="../../static/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="../../static/logo.png">
+<link rel="stylesheet" href="../../static/style.css?v=4687cbea59">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="../../">
+      <img class="wordmark-mark" src="../../static/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+      <span class="wordmark-text">GeneBencher</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="../../leaderboard/">Leaderboard</a></li><li><a href="../../models/">Models</a></li><li><a href="../../tasks/" aria-current="page">Tasks</a></li><li><a href="../../sections/">Sections</a></li><li><a href="../../compare/">Compare</a></li><li><a href="../../methodology/">Methodology</a></li><li><a href="../../cost/">Cost</a></li><li><a href="../../data/">Data</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="edition-bar">
+    <div class="shell edition-bar-inner">
+      <span class="tag tag-final">Final</span>
+      <a href="../../editions/benchmark-2026-11-09/">Full benchmark</a>
+      <span class="edition-meta">2026-11-17 · 60 min per task · 1 seed</span>
+    </div>
+  </div>
+  
+</header>
+
+<main id="main" tabindex="-1">
+
+<div class="shell">
+  
+
+<nav class="breadcrumb" aria-label="Breadcrumb">
+  <ol>
+    
+    <li>Home</li>
+    
+    <li><a href="../../tasks/">Tasks</a></li>
+    
+    <li>QTL-04</li>
+    
+  </ol>
+</nav>
+
+
+  <header class="page-head task-head">
+    <div>
+      <p class="eyebrow"><a href="../../sections/qtl/">QTL</a> · QTL-04</p>
+      <h1>Trans-eQTL hotspots and core-gene ranking</h1>
+      <p class="lead">Find trans-eQTL hotspots and rank their core genes. Scored on hotspot ranking, core-gene recovery and trans false-discovery control.</p>
+      <div class="tag-row">
+        <span class="tag tag-neutral">Analysis</span>
+        <span class="tag tag-neutral">Hard</span>
+        <span class="tag tag-neutral">Pass ≥ 0.45</span>
+        <span class="tag tag-neutral">60 min cap</span>
+      </div>
+    </div>
+    <div class="headline-score">
+      <p class="headline-rank">Model mean</p>
+      <p class="headline-number">0.510</p>
+      <p class="headline-label">4 of 6 passed · range 0.278</p>
+      <meter class="meter" min="0" max="1" value="0.5103035855530512" aria-hidden="true"></meter>
+    </div>
+  </header>
+
+  <section class="section-block" aria-labelledby="ladder-heading">
+    <div class="section-head">
+      <div>
+        <h2 id="ladder-heading">Score ladder</h2>
+        <p class="section-sub">Calibration baselines set the scale; model dots show this edition's results. The same numbers appear in the tables below.</p>
+      </div>
+    </div>
+    <figure class="chart">
+      <svg class="ladder" viewBox="0 0 780 262" width="100%" role="img" aria-labelledby="QTL-04-title QTL-04-desc"><title id="QTL-04-title">QTL-04 score ladder</title><desc id="QTL-04-desc">Scores from zero to one. Pass threshold 0.450. DeepSeek V4.1 Flash 0.655; Gemini 3.8 Flash 0.538; Crouton Alpha Free 0.537; Beam Free 0.487; Qwen3.8 Flash 0.469; GPT-6 Luna 0.377.</desc><line x1="419.1" y1="40" x2="419.1" y2="208" stroke="#8a3ffc" stroke-width="1.5" stroke-dasharray="4 3"/><text x="419.1" y="32" font-size="11" fill="#6929c4" text-anchor="middle">pass 0.450</text><text x="140" y="69.0" font-size="12" fill="#525252" text-anchor="end">DeepSeek V4.1 Flash</text><line x1="150" y1="65.0" x2="748" y2="65.0" stroke="#e8e8e8" stroke-width="1"/><circle cx="541.5" cy="65.0" r="5.5" fill="#8a3ffc" stroke="#ffffff" stroke-width="1.5"/><text x="552.5" y="69.0" font-size="11" fill="#161616" text-anchor="start">0.655</text><text x="140" y="95.0" font-size="12" fill="#525252" text-anchor="end">Gemini 3.8 Flash</text><line x1="150" y1="91.0" x2="748" y2="91.0" stroke="#e8e8e8" stroke-width="1"/><circle cx="471.5" cy="91.0" r="5.5" fill="#0f62fe" stroke="#ffffff" stroke-width="1.5"/><text x="482.5" y="95.0" font-size="11" fill="#161616" text-anchor="start">0.538</text><text x="140" y="121.0" font-size="12" fill="#525252" text-anchor="end">Crouton Alpha Free</text><line x1="150" y1="117.0" x2="748" y2="117.0" stroke="#e8e8e8" stroke-width="1"/><circle cx="471.3" cy="117.0" r="5.5" fill="#a56eff" stroke="#ffffff" stroke-width="1.5"/><text x="482.3" y="121.0" font-size="11" fill="#161616" text-anchor="start">0.537</text><text x="140" y="147.0" font-size="12" fill="#525252" text-anchor="end">Beam Free</text><line x1="150" y1="143.0" x2="748" y2="143.0" stroke="#e8e8e8" stroke-width="1"/><circle cx="441.3" cy="143.0" r="5.5" fill="#198038" stroke="#ffffff" stroke-width="1.5"/><text x="452.3" y="147.0" font-size="11" fill="#161616" text-anchor="start">0.487</text><text x="140" y="173.0" font-size="12" fill="#525252" text-anchor="end">Qwen3.8 Flash</text><line x1="150" y1="169.0" x2="748" y2="169.0" stroke="#e8e8e8" stroke-width="1"/><circle cx="430.2" cy="169.0" r="5.5" fill="#d12771" stroke="#ffffff" stroke-width="1.5"/><text x="441.2" y="173.0" font-size="11" fill="#161616" text-anchor="start">0.469</text><text x="140" y="199.0" font-size="12" fill="#525252" text-anchor="end">GPT-6 Luna</text><line x1="150" y1="195.0" x2="748" y2="195.0" stroke="#e8e8e8" stroke-width="1"/><circle cx="375.2" cy="195.0" r="5.5" fill="#525252" stroke="#ffffff" stroke-width="1.5"/><text x="386.2" y="199.0" font-size="11" fill="#161616" text-anchor="start">0.377</text><line x1="150" y1="208.0" x2="748" y2="208.0" stroke="#8d8d8d" stroke-width="1"/><line x1="150.0" y1="208.0" x2="150.0" y2="213.0" stroke="#8d8d8d" stroke-width="1"/><text x="150.0" y="227.0" font-size="11" fill="#525252" text-anchor="middle">0.00</text><line x1="299.5" y1="208.0" x2="299.5" y2="213.0" stroke="#8d8d8d" stroke-width="1"/><text x="299.5" y="227.0" font-size="11" fill="#525252" text-anchor="middle">0.25</text><line x1="449.0" y1="208.0" x2="449.0" y2="213.0" stroke="#8d8d8d" stroke-width="1"/><text x="449.0" y="227.0" font-size="11" fill="#525252" text-anchor="middle">0.50</text><line x1="598.5" y1="208.0" x2="598.5" y2="213.0" stroke="#8d8d8d" stroke-width="1"/><text x="598.5" y="227.0" font-size="11" fill="#525252" text-anchor="middle">0.75</text><line x1="748.0" y1="208.0" x2="748.0" y2="213.0" stroke="#8d8d8d" stroke-width="1"/><text x="748.0" y="227.0" font-size="11" fill="#525252" text-anchor="middle">1.00</text></svg>
+      <figcaption>Scores from 0 to 1. Dashed line is the pass threshold at 0.45.</figcaption>
+    </figure>
+  </section>
+
+  <section class="section-block" aria-labelledby="calibration-heading">
+    <div class="section-head">
+      <div>
+        <h2 id="calibration-heading">Calibration baselines</h2>
+        <p class="section-sub">Four reference solvers. They are context, not ranked models. Sub-scores are shown in the same order as the task weights.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Baseline scores for QTL-04.</caption>
+        <thead>
+          <tr>
+            <th scope="col">Solver</th>
+            <th scope="col" class="col-score">Score</th>
+            <th scope="col" class="col-sub mono">hotspot_auprc</th><th scope="col" class="col-sub mono">core_auroc</th><th scope="col" class="col-sub mono">core_recall_at_k</th><th scope="col" class="col-sub mono">trans_fdr</th>
+            <th scope="col" class="col-pass">Pass</th>
+            <th scope="col" class="col-time">Runtime</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+        </tbody>
+      </table>
+    </div>
+    <p class="table-note">The oracle is a truth-aware calibration ceiling and is never mounted for a solver. The reference solution is the implementation shipped with the task.</p>
+  </section>
+
+  <div class="two-col">
+    <section class="section-block" aria-labelledby="weights-heading">
+      <div class="section-head">
+        <div>
+          <h2 id="weights-heading">Scoring weights</h2>
+          <p class="section-sub">The task score is the weighted sum of these sub-scores.</p>
+        </div>
+      </div>
+      <table class="data-table compact">
+        <caption>Public scoring weights for QTL-04.</caption>
+        <thead><tr><th scope="col">Sub-score</th><th scope="col" class="col-score">Weight</th></tr></thead>
+        <tbody>
+          <tr><th scope="row" class="mono">hotspot_auprc</th><td class="col-score">0.30</td></tr><tr><th scope="row" class="mono">core_auroc</th><td class="col-score">0.30</td></tr><tr><th scope="row" class="mono">core_recall_at_k</th><td class="col-score">0.20</td></tr><tr><th scope="row" class="mono">trans_fdr</th><td class="col-score">0.20</td></tr>
+        </tbody>
+      </table>
+      <p class="table-note">Weights sum to 1.00 by construction; each sub-score is in [0, 1].</p>
+    </section>
+
+    <section class="section-block">
+      <h2>Distribution</h2>
+      <div class="stats stats-small">
+        <div class="stat"><p class="stat-label">Mean</p><p class="stat-value">0.510</p></div>
+        <div class="stat"><p class="stat-label">Minimum</p><p class="stat-value">0.377</p></div>
+        <div class="stat"><p class="stat-label">Maximum</p><p class="stat-value">0.655</p></div>
+        <div class="stat"><p class="stat-label">Range</p><p class="stat-value">0.278</p></div>
+        <div class="stat"><p class="stat-label">Passed</p><p class="stat-value">4 / 6</p></div>
+      </div>
+      <p class="section-sub">
+        The task separates models: 4 of 6 passed.
+      </p>
+    </section>
+  </div>
+
+  <section class="section-block" aria-labelledby="models-heading">
+    <div class="section-head">
+      <div>
+        <h2 id="models-heading">Model results</h2>
+        <p class="section-sub">Ordered by score. Sub-scores are shown for every weight so a failure can be read, not just ranked.</p>
+      </div>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table">
+        <caption>Model results on QTL-04 in Full benchmark.</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="col-rank">Rank</th>
+            <th scope="col">Model</th>
+            <th scope="col" class="col-score">Score</th>
+            <th scope="col" class="col-sub mono">hotspot_auprc</th><th scope="col" class="col-sub mono">core_auroc</th><th scope="col" class="col-sub mono">core_recall_at_k</th><th scope="col" class="col-sub mono">trans_fdr</th>
+            <th scope="col" class="col-pass">Pass</th>
+            <th scope="col" class="col-status">Status</th>
+            <th scope="col" class="col-time">Runtime</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          
+          <tr>
+            <td class="col-rank rank">1</td>
+            <td class="model-cell"><a href="../../models/deepseek-v4.1-flash/">DeepSeek V4.1 Flash</a></td>
+            <td class="col-score"><span class="score-strong">0.655</span><meter class="meter" min="0" max="1" value="0.6547654145224996" aria-hidden="true"></meter></td>
+            <td class="col-sub">0.813</td><td class="col-sub">0.740</td><td class="col-sub">0.444</td><td class="col-sub">0.500</td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            <td class="col-time">11m 57s</td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">2</td>
+            <td class="model-cell"><a href="../../models/gemini-3.8-flash/">Gemini 3.8 Flash</a></td>
+            <td class="col-score"><span class="score-strong">0.538</span><meter class="meter" min="0" max="1" value="0.5375785999088369" aria-hidden="true"></meter></td>
+            <td class="col-sub">0.595</td><td class="col-sub">0.808</td><td class="col-sub">0.333</td><td class="col-sub">0.250</td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            <td class="col-time">20m 29s</td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">3</td>
+            <td class="model-cell"><a href="../../models/crouton-alpha-free/">Crouton Alpha Free</a></td>
+            <td class="col-score"><span class="score-strong">0.537</span><meter class="meter" min="0" max="1" value="0.5372491397491398" aria-hidden="true"></meter></td>
+            <td class="col-sub">0.605</td><td class="col-sub">0.816</td><td class="col-sub">0.556</td><td class="col-sub">0.000</td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            <td class="col-time">22m 22s</td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">4</td>
+            <td class="model-cell"><a href="../../models/beam-free/">Beam Free</a></td>
+            <td class="col-score"><span class="score-strong">0.487</span><meter class="meter" min="0" max="1" value="0.48705738705738705" aria-hidden="true"></meter></td>
+            <td class="col-sub">1.000</td><td class="col-sub">0.549</td><td class="col-sub">0.111</td><td class="col-sub">0.000</td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            <td class="col-time">3m 01s</td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">5</td>
+            <td class="model-cell"><a href="../../models/qwen3.8-flash/">Qwen3.8 Flash</a></td>
+            <td class="col-score"><span class="score-strong">0.469</span><meter class="meter" min="0" max="1" value="0.4685678099960783" aria-hidden="true"></meter></td>
+            <td class="col-sub">0.522</td><td class="col-sub">0.744</td><td class="col-sub">0.444</td><td class="col-sub">0.000</td>
+            <td class="col-pass"><span class="tag status-ok">Pass</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            <td class="col-time">34m 30s</td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">6</td>
+            <td class="model-cell"><a href="../../models/gpt-6-luna/">GPT-6 Luna</a></td>
+            <td class="col-score"><span class="score-strong">0.377</span><meter class="meter" min="0" max="1" value="0.37660316208436506" aria-hidden="true"></meter></td>
+            <td class="col-sub">0.631</td><td class="col-sub">0.551</td><td class="col-sub">0.111</td><td class="col-sub">0.000</td>
+            <td class="col-pass"><span class="tag tag-neutral">Fail</span></td>
+            <td class="col-status"><span class="tag status-ok">Completed</span></td>
+            <td class="col-time">6m 00s</td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    
+  </section>
+
+  <p class="section-sub"><a href="../../downloads/task-scores.csv">Download task scores</a> · <a href="../../downloads/calibration.csv">Download calibration</a> · <a href="../../methodology/">Methodology</a></p>
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div>
+      <p class="footer-name">GeneBencher</p>
+      <p class="footer-note">A public leaderboard for AI agents on bioinformatics, omics and statistical genetics.</p>
+    </div>
+    <div class="footer-links">
+      <a href="../../methodology/">Methodology</a>
+      <a href="../../data/">Data</a>
+      <a href="../../editions/">Editions</a>
+      <a href="https://github.com/danielduyvo/genebencher_leaderboard" rel="noopener">Site repository</a>
+    </div>
+  </div>
+  <div class="shell footer-legal">
+    <p>GeneBencher benchmark. Scores are edition-specific and are not comparable across editions. Content licensed MIT.</p>
+  </div>
+</footer>
+
+<script src="../../static/app.js?v=b8e5dd60d9" defer></script>
+</body>
+</html>

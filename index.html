@@ -1,0 +1,346 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>GeneBencher — AI agents on omics benchmarks</title>
+<meta name="description" content="GeneBencher measures how well AI agents perform real bioinformatics, omics and statistical-genetics analyses on a synthetic but biologically structured cohort. Every score is reproducible from a published edition, dataset checksum and scoring rubric.">
+<link rel="canonical" href="https://danielduyvo.github.io/genebencher_leaderboard/">
+<meta property="og:url" content="https://danielduyvo.github.io/genebencher_leaderboard/">
+<meta property="og:title" content="GeneBencher — AI agents on omics benchmarks">
+<meta property="og:description" content="GeneBencher measures how well AI agents perform real bioinformatics, omics and statistical-genetics analyses on a synthetic but biologically structured cohort. Every score is reproducible from a published edition, dataset checksum and scoring rubric.">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="GeneBencher">
+<meta name="theme-color" content="#161616">
+<meta name="color-scheme" content="light">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; img-src 'self' data:; style-src 'self'; script-src 'self'; font-src 'self'; connect-src 'self'; base-uri 'none'; form-action 'none'; frame-ancestors 'none'">
+<link rel="icon" href="./static/logo.svg" type="image/svg+xml">
+<link rel="icon" href="./static/logo.png" type="image/png">
+<link rel="apple-touch-icon" href="./static/logo.png">
+<link rel="stylesheet" href="./static/style.css?v=4687cbea59">
+</head>
+<body>
+<a class="skip-link" href="#main">Skip to content</a>
+
+<header class="masthead">
+  <div class="shell masthead-inner">
+    <a class="wordmark" href="./">
+      <img class="wordmark-mark" src="./static/logo.svg" width="32" height="32" alt="" aria-hidden="true">
+      <span class="wordmark-text">GeneBencher</span>
+    </a>
+    <nav class="primary-nav" aria-label="Primary">
+      <ul>
+        <li><a href="./leaderboard/">Leaderboard</a></li><li><a href="./models/">Models</a></li><li><a href="./tasks/">Tasks</a></li><li><a href="./sections/">Sections</a></li><li><a href="./compare/">Compare</a></li><li><a href="./methodology/">Methodology</a></li><li><a href="./cost/">Cost</a></li><li><a href="./data/">Data</a></li>
+      </ul>
+    </nav>
+  </div>
+  
+  <div class="edition-bar">
+    <div class="shell edition-bar-inner">
+      <span class="tag tag-final">Final</span>
+      <a href="./editions/benchmark-2026-11-09/">Full benchmark</a>
+      <span class="edition-meta">2026-11-17 · 60 min per task · 1 seed</span>
+    </div>
+  </div>
+  
+</header>
+
+<main id="main" tabindex="-1">
+
+<section class="hero">
+  <div class="shell">
+    <p class="eyebrow">GeneBencher · Full benchmark · 2026-11-17</p>
+    <h1>Which AI agents can do real omics work?</h1>
+    <p class="lead">
+      GeneBencher scores relatively low cost AI agents and models on
+      complete bioinformatics, omics and statistical-genetics analyses.
+      Every result is tied to a dataset checksum, a scoring rubric and a
+      published protocol. No prompts, inputs or truth data are public.
+    </p>
+    <div class="tag-row">
+      <span class="tag tag-final">Final</span>
+      <span class="tag tag-neutral">26 of 26 planned tasks</span>
+      <span class="tag tag-neutral">60 min cap</span>
+      <span class="tag tag-neutral">6 ranked models</span>
+    </div>
+  </div>
+</section>
+
+<div class="shell">
+
+  <div class="notification " role="note">
+    <div class="notification-mark" aria-hidden="true">!</div>
+    <div>
+      <p class="notification-title">Read the caveats before comparing scores.</p>
+      <p>
+        Six models on all 26 tasks with a 60-minute cap per task. All six completed every task and are ranked. One seed per task.
+      </p>
+      <p>
+        <strong>Scope of the field:</strong> a budget-limited sample of
+        relatively low-cost models, not a survey of the strongest models
+        available.
+      </p>
+      <details>
+        <summary>What limits these numbers</summary>
+        <ul class="caveat-list">
+          <li>Model coverage is a budget-limited convenience sample, not a survey of the strongest available models. The six ranked runs are relatively low-cost entries, mostly Flash/Free tiers and free previews; no lab&#39;s flagship frontier model was run. The field is limited to what could be funded from one shared weekly OpenCode Go allowance. Gemini 4 Argon, Grok 4.7 and Kimi K3.1 Pro were dropped before testing because each could consume most of that allowance in a few tasks. The benchmark is also still early — this is its first full edition, and the task set, rubrics and protocol are being refined. Treat the ranking as a preliminary comparison of affordable models, not as evidence about the best available model.</li><li>Hy4, MiniMax M3.1 Flash and GLM-5.3 Flash are not published. The shared weekly Go allowance ran out before they could attempt most tasks, so their partial scores would not be a fair comparison.</li><li>LongCat 2.5 Free is not published either. Its provider rate limited 24 of 26 tasks, so only two annotation tasks were measured. A 0.831 average over those two tasks would misrepresent the model, and the other 24 tasks were never attempted.</li><li>The 60-minute wall-clock cap is part of the protocol. A task that does not finish in time is a failure in the strict score; slow but correct approaches can be cut off.</li><li>A task score measures the rubric&#39;s deliverables, not how hard the analysis is to code. Colocalization (FM-02) is simple to implement but averaged 0.377 across the ranked models, because the rubric scores calibrated statistical output rather than whether the pipeline runs.</li><li>One seed per task. Replicate variance is not estimated.</li><li>The comparison confounds model capability with agent-harness behaviour. Gemini 3.8 Flash runs through agy, the other models through OpenCode.</li><li>The local subprocess adapter was used instead of the container backend.</li><li>Free OpenCode Go models cost no allowance; paid models draw on one shared account-wide weekly budget, which is why the run was paused and resumed across two weeks.</li>
+        </ul>
+      </details>
+    </div>
+  </div>
+
+  <section class="stats" aria-label="Edition summary">
+    
+    <div class="stat">
+      <p class="stat-label">Models</p>
+      <p class="stat-value">6</p>
+      <p class="stat-note">agent and model pairs</p>
+    </div>
+    
+    <div class="stat">
+      <p class="stat-label">Tasks</p>
+      <p class="stat-value">26 of 26</p>
+      <p class="stat-note">implemented of planned</p>
+    </div>
+    
+    <div class="stat">
+      <p class="stat-label">Sections</p>
+      <p class="stat-value">8</p>
+      <p class="stat-note">scored in this edition</p>
+    </div>
+    
+    <div class="stat">
+      <p class="stat-label">Top score</p>
+      <p class="stat-value">0.587</p>
+      <p class="stat-note">Gemini 3.8 Flash overall</p>
+    </div>
+    
+  </section>
+
+  <section class="section-block" aria-labelledby="leaderboard-heading">
+    <div class="section-head">
+      <div>
+        <h2 id="leaderboard-heading">Leaderboard</h2>
+        <p class="section-sub">Macro-average over sections, so no section dominates. Higher is better.</p>
+      </div>
+      <a class="btn" href="./leaderboard/">Full leaderboard</a>
+    </div>
+    <div class="table-wrap">
+      <table class="data-table leaderboard">
+        <caption>Model scores for Full benchmark. Scores range from 0 to 1.</caption>
+        <thead>
+          <tr>
+            <th scope="col" class="col-rank">Rank</th>
+            <th scope="col">Model</th>
+            <th scope="col" class="col-score">Overall</th>
+            <th scope="col" class="col-pass">Passed</th>
+            <th scope="col" class="col-section">Genotype QC</th><th scope="col" class="col-section">Bulk RNA</th><th scope="col" class="col-section">Single cell</th><th scope="col" class="col-section">QTL</th><th scope="col" class="col-section">Gene networks</th><th scope="col" class="col-section">Fine mapping</th><th scope="col" class="col-section">Functional annotation</th><th scope="col" class="col-section">Integrative</th>
+          </tr>
+        </thead>
+        <tbody>
+          
+          
+          <tr>
+            <td class="col-rank rank">1</td>
+            <td class="model-cell">
+              <a href="./models/gemini-3.8-flash/">Gemini 3.8 Flash</a>
+              <span class="model-meta">agy · high effort</span>
+            </td>
+            <td class="col-score"><span class="score-strong">0.587</span><meter class="meter" min="0" max="1" value="0.5868948624482802" aria-hidden="true"></meter></td>
+            <td class="col-pass">19 / 26</td>
+            <td class="cell heat heat-3"><span class="num">0.687</span></td><td class="cell heat heat-2"><span class="num">0.597</span></td><td class="cell heat heat-3"><span class="num">0.670</span></td><td class="cell heat heat-2"><span class="num">0.584</span></td><td class="cell heat heat-2"><span class="num">0.450</span></td><td class="cell heat heat-2"><span class="num">0.444</span></td><td class="cell heat heat-3"><span class="num">0.738</span></td><td class="cell heat heat-2"><span class="num">0.526</span></td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">2</td>
+            <td class="model-cell">
+              <a href="./models/deepseek-v4.1-flash/">DeepSeek V4.1 Flash</a>
+              <span class="model-meta">opencode · high effort</span>
+            </td>
+            <td class="col-score"><span class="score-strong">0.572</span><meter class="meter" min="0" max="1" value="0.5724312727953043" aria-hidden="true"></meter></td>
+            <td class="col-pass">20 / 26</td>
+            <td class="cell heat heat-3"><span class="num">0.696</span></td><td class="cell heat heat-2"><span class="num">0.582</span></td><td class="cell heat heat-2"><span class="num">0.444</span></td><td class="cell heat heat-2"><span class="num">0.584</span></td><td class="cell heat heat-2"><span class="num">0.445</span></td><td class="cell heat heat-2"><span class="num">0.402</span></td><td class="cell heat heat-4"><span class="num">0.892</span></td><td class="cell heat heat-2"><span class="num">0.533</span></td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">3</td>
+            <td class="model-cell">
+              <a href="./models/crouton-alpha-free/">Crouton Alpha Free</a>
+              <span class="model-meta">opencode · high effort</span>
+            </td>
+            <td class="col-score"><span class="score-strong">0.558</span><meter class="meter" min="0" max="1" value="0.5576142090584436" aria-hidden="true"></meter></td>
+            <td class="col-pass">19 / 26</td>
+            <td class="cell heat heat-3"><span class="num">0.722</span></td><td class="cell heat heat-1"><span class="num">0.348</span></td><td class="cell heat heat-3"><span class="num">0.778</span></td><td class="cell heat heat-3"><span class="num">0.638</span></td><td class="cell heat heat-2"><span class="num">0.541</span></td><td class="cell heat heat-1"><span class="num">0.368</span></td><td class="cell heat heat-3"><span class="num">0.653</span></td><td class="cell heat heat-2"><span class="num">0.413</span></td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">4</td>
+            <td class="model-cell">
+              <a href="./models/qwen3.8-flash/">Qwen3.8 Flash</a>
+              <span class="model-meta">opencode · xhigh effort</span>
+            </td>
+            <td class="col-score"><span class="score-strong">0.522</span><meter class="meter" min="0" max="1" value="0.5215919686564622" aria-hidden="true"></meter></td>
+            <td class="col-pass">18 / 26</td>
+            <td class="cell heat heat-2"><span class="num">0.536</span></td><td class="cell heat heat-1"><span class="num">0.361</span></td><td class="cell heat heat-3"><span class="num">0.636</span></td><td class="cell heat heat-3"><span class="num">0.645</span></td><td class="cell heat heat-2"><span class="num">0.445</span></td><td class="cell heat heat-1"><span class="num">0.353</span></td><td class="cell heat heat-4"><span class="num">0.827</span></td><td class="cell heat heat-1"><span class="num">0.369</span></td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">5</td>
+            <td class="model-cell">
+              <a href="./models/gpt-6-luna/">GPT-6 Luna</a>
+              <span class="model-meta">opencode · high effort</span>
+            </td>
+            <td class="col-score"><span class="score-strong">0.495</span><meter class="meter" min="0" max="1" value="0.49470703501228297" aria-hidden="true"></meter></td>
+            <td class="col-pass">14 / 26</td>
+            <td class="cell heat heat-2"><span class="num">0.578</span></td><td class="cell heat heat-2"><span class="num">0.478</span></td><td class="cell heat heat-3"><span class="num">0.667</span></td><td class="cell heat heat-2"><span class="num">0.542</span></td><td class="cell heat heat-2"><span class="num">0.474</span></td><td class="cell heat heat-2"><span class="num">0.435</span></td><td class="cell heat heat-2"><span class="num">0.472</span></td><td class="cell heat heat-1"><span class="num">0.312</span></td>
+          </tr>
+          
+          
+          <tr>
+            <td class="col-rank rank">6</td>
+            <td class="model-cell">
+              <a href="./models/beam-free/">Beam Free</a>
+              <span class="model-meta">opencode · high effort</span>
+            </td>
+            <td class="col-score"><span class="score-strong">0.430</span><meter class="meter" min="0" max="1" value="0.4303944792673049" aria-hidden="true"></meter></td>
+            <td class="col-pass">11 / 26</td>
+            <td class="cell heat heat-2"><span class="num">0.539</span></td><td class="cell heat heat-0"><span class="num">0.180</span></td><td class="cell heat heat-3"><span class="num">0.634</span></td><td class="cell heat heat-2"><span class="num">0.450</span></td><td class="cell heat heat-1"><span class="num">0.306</span></td><td class="cell heat heat-2"><span class="num">0.436</span></td><td class="cell heat heat-2"><span class="num">0.551</span></td><td class="cell heat heat-1"><span class="num">0.347</span></td>
+          </tr>
+          
+        </tbody>
+      </table>
+    </div>
+    
+  </section>
+
+  <div class="two-col">
+    <section class="section-block" aria-labelledby="heatmap-heading">
+      <div class="section-head">
+        <div>
+          <h2 id="heatmap-heading">Capability profile</h2>
+          <p class="section-sub">Section scores at a glance. Numbers are always shown; colour is a second cue.</p>
+        </div>
+      </div>
+      <div class="table-wrap">
+        <table class="data-table heatmap">
+          <caption>Model by section score.</caption>
+          <thead>
+            <tr><th scope="col">Model</th><th scope="col">Genotype QC</th><th scope="col">Bulk RNA</th><th scope="col">Single cell</th><th scope="col">QTL</th><th scope="col">Gene networks</th><th scope="col">Fine mapping</th><th scope="col">Functional annotation</th><th scope="col">Integrative</th></tr>
+          </thead>
+          <tbody>
+            
+            
+            <tr>
+              <th scope="row" class="model-cell"><a href="./models/gemini-3.8-flash/">Gemini 3.8 Flash</a></th>
+              <td class="cell heat heat-3"><span class="num">0.687</span></td><td class="cell heat heat-2"><span class="num">0.597</span></td><td class="cell heat heat-3"><span class="num">0.670</span></td><td class="cell heat heat-2"><span class="num">0.584</span></td><td class="cell heat heat-2"><span class="num">0.450</span></td><td class="cell heat heat-2"><span class="num">0.444</span></td><td class="cell heat heat-3"><span class="num">0.738</span></td><td class="cell heat heat-2"><span class="num">0.526</span></td>
+            </tr>
+            
+            
+            <tr>
+              <th scope="row" class="model-cell"><a href="./models/deepseek-v4.1-flash/">DeepSeek V4.1 Flash</a></th>
+              <td class="cell heat heat-3"><span class="num">0.696</span></td><td class="cell heat heat-2"><span class="num">0.582</span></td><td class="cell heat heat-2"><span class="num">0.444</span></td><td class="cell heat heat-2"><span class="num">0.584</span></td><td class="cell heat heat-2"><span class="num">0.445</span></td><td class="cell heat heat-2"><span class="num">0.402</span></td><td class="cell heat heat-4"><span class="num">0.892</span></td><td class="cell heat heat-2"><span class="num">0.533</span></td>
+            </tr>
+            
+            
+            <tr>
+              <th scope="row" class="model-cell"><a href="./models/crouton-alpha-free/">Crouton Alpha Free</a></th>
+              <td class="cell heat heat-3"><span class="num">0.722</span></td><td class="cell heat heat-1"><span class="num">0.348</span></td><td class="cell heat heat-3"><span class="num">0.778</span></td><td class="cell heat heat-3"><span class="num">0.638</span></td><td class="cell heat heat-2"><span class="num">0.541</span></td><td class="cell heat heat-1"><span class="num">0.368</span></td><td class="cell heat heat-3"><span class="num">0.653</span></td><td class="cell heat heat-2"><span class="num">0.413</span></td>
+            </tr>
+            
+            
+            <tr>
+              <th scope="row" class="model-cell"><a href="./models/qwen3.8-flash/">Qwen3.8 Flash</a></th>
+              <td class="cell heat heat-2"><span class="num">0.536</span></td><td class="cell heat heat-1"><span class="num">0.361</span></td><td class="cell heat heat-3"><span class="num">0.636</span></td><td class="cell heat heat-3"><span class="num">0.645</span></td><td class="cell heat heat-2"><span class="num">0.445</span></td><td class="cell heat heat-1"><span class="num">0.353</span></td><td class="cell heat heat-4"><span class="num">0.827</span></td><td class="cell heat heat-1"><span class="num">0.369</span></td>
+            </tr>
+            
+            
+            <tr>
+              <th scope="row" class="model-cell"><a href="./models/gpt-6-luna/">GPT-6 Luna</a></th>
+              <td class="cell heat heat-2"><span class="num">0.578</span></td><td class="cell heat heat-2"><span class="num">0.478</span></td><td class="cell heat heat-3"><span class="num">0.667</span></td><td class="cell heat heat-2"><span class="num">0.542</span></td><td class="cell heat heat-2"><span class="num">0.474</span></td><td class="cell heat heat-2"><span class="num">0.435</span></td><td class="cell heat heat-2"><span class="num">0.472</span></td><td class="cell heat heat-1"><span class="num">0.312</span></td>
+            </tr>
+            
+            
+            <tr>
+              <th scope="row" class="model-cell"><a href="./models/beam-free/">Beam Free</a></th>
+              <td class="cell heat heat-2"><span class="num">0.539</span></td><td class="cell heat heat-0"><span class="num">0.180</span></td><td class="cell heat heat-3"><span class="num">0.634</span></td><td class="cell heat heat-2"><span class="num">0.450</span></td><td class="cell heat heat-1"><span class="num">0.306</span></td><td class="cell heat heat-2"><span class="num">0.436</span></td><td class="cell heat heat-2"><span class="num">0.551</span></td><td class="cell heat heat-1"><span class="num">0.347</span></td>
+            </tr>
+            
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section-block" aria-labelledby="standouts-heading">
+      <div class="section-head">
+        <div>
+          <h2 id="standouts-heading">What stands out</h2>
+          <p class="section-sub">Generated from the published rows, not hand-written.</p>
+        </div>
+      </div>
+      <ul class="findings">
+        <li>Gemini 3.8 Flash leads the edition at 0.587 overall with 19 of 26 tasks passed.</li><li>SC-01 separates models most: a 0.811 spread between best and worst.</li><li>FM-03 was the hardest task: mean 0.004, 0 of 6 models passed.</li><li>Every model passed GQC-02, GQC-04, BULK-01, SC-02, SC-03, QTL-02 and FM-01; these tasks do not currently separate the field.</li>
+      </ul>
+      <p class="section-sub"><a href="./methodology/">How scoring works</a> · <a href="./compare/">Compare models</a></p>
+    </section>
+  </div>
+
+  <section class="section-block" aria-labelledby="explore-heading">
+    <div class="section-head">
+      <div>
+        <h2 id="explore-heading">Explore</h2>
+        <p class="section-sub">Every page is build-time HTML. No client-side rendering, no tracking.</p>
+      </div>
+    </div>
+    <div class="card-grid">
+      <a class="card" href="./tasks/">
+        <span class="card-kicker">Catalogue</span>
+        <span class="card-title">Tasks</span>
+        <span class="card-text">Weights, pass thresholds and calibration baselines where available for the 26 implemented tasks.</span>
+      </a>
+      <a class="card" href="./sections/">
+        <span class="card-kicker">Structure</span>
+        <span class="card-title">Sections</span>
+        <span class="card-text">Seven scored sections plus the planned integrative section.</span>
+      </a>
+      <a class="card" href="./compare/">
+        <span class="card-kicker">Comparison</span>
+        <span class="card-title">Compare models</span>
+        <span class="card-text">Model by section matrix with all numbers visible.</span>
+      </a>
+      <a class="card" href="./data/">
+        <span class="card-kicker">Open data</span>
+        <span class="card-title">Downloads</span>
+        <span class="card-text">JSON, JSONL and CSV exports of every published number.</span>
+      </a>
+    </div>
+  </section>
+
+</div>
+
+</main>
+
+<footer class="footer">
+  <div class="shell footer-inner">
+    <div>
+      <p class="footer-name">GeneBencher</p>
+      <p class="footer-note">A public leaderboard for AI agents on bioinformatics, omics and statistical genetics.</p>
+    </div>
+    <div class="footer-links">
+      <a href="./methodology/">Methodology</a>
+      <a href="./data/">Data</a>
+      <a href="./editions/">Editions</a>
+      <a href="https://github.com/danielduyvo/genebencher_leaderboard" rel="noopener">Site repository</a>
+    </div>
+  </div>
+  <div class="shell footer-legal">
+    <p>GeneBencher benchmark. Scores are edition-specific and are not comparable across editions. Content licensed MIT.</p>
+  </div>
+</footer>
+
+<script src="./static/app.js?v=b8e5dd60d9" defer></script>
+</body>
+</html>
